@@ -251,3 +251,57 @@ dialog ul { padding-left: 20px; }
 .contact-art { mix-blend-mode: normal; }
 .project-art { background: transparent; border-color: transparent; }
 .project-art picture, .project-art img { background: transparent; }
+
+
+/* CONTACT v4 — three simple ways to connect, with a tighter editorial layout. */
+.contact-section { padding: 72px 0 76px; }
+.contact-layout {
+  max-width: 1030px;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 305px);
+  gap: clamp(18px, 3.2vw, 38px);
+  align-items: center;
+}
+.contact-layout > div:first-child { min-width: 0; }
+.contact-layout h2 { font-size: clamp(2.3rem, 4vw, 3.55rem); }
+.contact-layout p:not(.section-kicker) { max-width: 590px; margin-bottom: 23px; }
+.contact-decoration picture { max-width: 305px; }
+.contact-actions { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; }
+.contact-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 11px 15px;
+  border: 1px solid #d6e0e8;
+  border-radius: 8px;
+  background: #fff;
+  color: #1b2938;
+  font-size: .84rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.contact-option svg { width: 17px; height: 17px; flex: none; }
+.contact-option .contact-arrow { color: var(--blue); line-height: 1; font-size: 1rem; }
+.contact-option:hover { border-color: #92bde0; background: #f4f9fd; transform: translateY(-2px); }
+.contact-option-primary { background: #171f2a; border-color: #171f2a; color: #fff; }
+.contact-option-primary .contact-arrow { color: #a6d6ff; }
+.contact-option-primary:hover { background: #254262; border-color: #254262; }
+@media (max-width: 780px) {
+  .contact-layout { grid-template-columns: minmax(0, 1fr) 200px; gap: 20px; }
+  .contact-option { padding-inline: 12px; }
+}
+@media (max-width: 630px) {
+  .contact-section { padding: 50px 0 54px; }
+  .contact-layout { display: block; }
+  .contact-decoration { display: flex; margin: 24px auto 0; max-width: 230px; }
+  .contact-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .contact-option { justify-content: flex-start; padding: 12px 13px; min-width: 0; }
+  .contact-option .contact-arrow { margin-left: auto; }
+  .contact-option:last-child { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-option { transition: none; }
+  .contact-option:hover { transform: none; }
+}
