@@ -243,3 +243,11 @@ dialog ul { padding-left: 20px; }
   .about-life { grid-template-columns: 1fr; gap: 8px; }
   .about-life-art { width: min(66%,172px); }
 }
+
+
+/* Data Sketch Editorial - seamless transparent animated artwork (v3). */
+.hero-art,
+.about-life-art img,
+.contact-art { mix-blend-mode: normal; }
+.project-art { background: transparent; border-color: transparent; }
+.project-art picture, .project-art img { background: transparent; }
