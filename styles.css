@@ -221,3 +221,25 @@ dialog ul { padding-left: 20px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; }
 }
+
+
+/* About Me / Contact: original approved Data Sketch Editorial animations. */
+.about-life { display: grid; grid-template-columns: 148px minmax(0,1fr); align-items: center; gap: 17px; margin-top: 23px; padding-top: 17px; border-top: 1px solid #e3e5e6; }
+.about-life-art { display: block; width: 148px; max-width: 100%; }
+.about-life-art img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+.about-life-eyebrow { color: #527d9f; font-size: .64rem; font-weight: 700; letter-spacing: .13em; line-height: 1.4; margin: 0 0 8px; }
+.about-life-copy p:not(.about-life-eyebrow) { color: #5d6771; font-size: .82rem; line-height: 1.75; margin: 0; }
+.contact-layout { grid-template-columns: minmax(0,1fr) minmax(205px,295px); gap: 26px; }
+.contact-decoration { opacity: 1; display: flex; align-items: center; justify-content: center; }
+.contact-decoration picture { display: block; width: 100%; max-width: 290px; }
+.contact-art { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+@media (max-width: 780px) {
+  .contact-layout { grid-template-columns: minmax(0,1fr) 210px; gap: 12px; }
+}
+@media (max-width: 630px) {
+  .contact-decoration { display: flex; margin: 20px auto 0; max-width: 230px; }
+}
+@media (max-width: 390px) {
+  .about-life { grid-template-columns: 1fr; gap: 8px; }
+  .about-life-art { width: min(66%,172px); }
+}

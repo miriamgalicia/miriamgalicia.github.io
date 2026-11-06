@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20261106-2">
   <script src="./script.js" defer></script>
 </head>
 <body>
@@ -28,7 +28,7 @@
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
-      <a class="cv-link" href="./assets/Miriam_Galicia_CV_public.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">&#8599;</span></a>
+      <a class="cv-link" href="./assets/Miriam_Galicia_CV_public.pdf?v=20261106-3" target="_blank" rel="noopener">CV <span aria-hidden="true">&#8599;</span></a>
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -181,6 +181,16 @@
             <div><span class="fact-mark">&#9678;</span><span>Based in Mexico City, Mexico</span></div>
             <div><span class="fact-mark">&#9782;</span><span>Spanish (native) &middot; English (C1)</span></div>
           </div>
+          <div class="about-life">
+            <picture class="about-life-art">
+              <source media="(prefers-reduced-motion: reduce)" srcset="./assets/about-me-seis-facetas-still.png">
+              <img src="./assets/about-me-seis-facetas.gif" alt="Hand-drawn scenes of painting, music, nature, reading, movies, and exercise" loading="lazy" width="252" height="251">
+            </picture>
+            <div class="about-life-copy">
+              <p class="about-life-eyebrow">BEYOND THE DATA</p>
+              <p>Creative at heart. I recharge through painting, live music, nature, reading, films and staying active.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -197,7 +207,10 @@
           </div>
         </div>
         <div class="contact-decoration" aria-hidden="true">
-          <svg viewBox="0 0 200 170"><path d="M20 130 Q52 111 77 115 Q102 110 125 80 Q155 41 181 24" fill="none" stroke="#217cce" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 2"/><g fill="#4d9bdf"><circle cx="20" cy="130" r="6"/><circle cx="77" cy="115" r="6"/><circle cx="125" cy="80" r="6"/><circle cx="181" cy="24" r="6"/></g><path d="M160 26 L181 24 L180 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg>
+          <picture>
+            <source media="(prefers-reduced-motion: reduce)" srcset="./assets/contact-llamada-still.png">
+            <img class="contact-art" src="./assets/contact-llamada.gif" alt="" loading="lazy" width="508" height="508">
+          </picture>
         </div>
       </div>
     </section>
