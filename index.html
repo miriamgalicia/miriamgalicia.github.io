@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdfcf9">
+  <meta name="description" content="Miriam Galicia - Data Analyst and Analytics Engineering. Selected work in consumer analytics, data engineering, and data storytelling.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Miriam Galicia | Data Analyst">
+  <meta property="og:description" content="Finding stories hidden in data. Analytics, engineering and thoughtful storytelling.">
+  <title>Miriam Galicia | Data Analyst</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Miriam Galicia, home">MIRIAM GALICIA<span class="brand-period">.</span></a>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <a class="cv-link" href="./assets/Miriam_Galicia_CV_public.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">&#8599;</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-note" aria-hidden="true">Data<br>+ curiosity<br>= impact</div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> DATA ANALYST <span class="dot-divider">/</span> ANALYTICS ENGINEERING</p>
+        <h1 id="hero-title">Finding stories<br>hidden in <span class="headline-swoosh">data.</span></h1>
+        <p class="hero-description">I transform complex data into clear insights, practical tools, and better business decisions.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#work">View my work <span aria-hidden="true">&#8594;</span></a>
+          <a class="text-link" href="#about">A little about me <span aria-hidden="true">&#8599;</span></a>
+        </div>
+        <p class="hero-footnote">Consumer analytics <span aria-hidden="true">&#183;</span> Data engineering <span aria-hidden="true">&#183;</span> Storytelling</p>
+      </div>
+      <div class="hero-visual">
+        <picture>
+          <source srcset="./assets/data-sketch-still.png" media="(prefers-reduced-motion: reduce)">
+          <img class="hero-art" src="./assets/data-sketch-original.gif" alt="Original hand-sketched girl with glasses and an animated blue bar chart" width="513" height="512" fetchpriority="high">
+        </picture>
+        <span class="hero-art-label" aria-hidden="true">fig. 01 / data sketch</span>
+      </div>
+    </section>
+
+    <section class="work-section section-cream" id="work" aria-labelledby="work-title">
+      <div class="container section-content">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">01 / WHAT I'VE WORKED ON</p>
+            <h2 id="work-title" class="section-title sketch-heading">Selected work <span class="sketch-underline" aria-hidden="true"></span></h2>
+          </div>
+          <a class="section-more" href="#experience">Explore my experience <span aria-hidden="true">&#8594;</span></a>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-art" aria-label="Sketch of a woman watching different-sized buildings as market growth charts">
+              <picture>
+                <source media="(prefers-reduced-motion: reduce)" srcset="./assets/market-share-city-still.png">
+                <img src="./assets/market-share-city-card.gif" alt="Hand-sketched woman looking at a growing market skyline" loading="lazy" width="560" height="340">
+              </picture>
+            </div>
+            <div class="project-copy">
+              <p class="project-number">FOCUS AREA 01</p>
+              <h3>Market &amp; Consumer Insights</h3>
+              <p class="project-tags">SQL &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; Consumer data</p>
+              <p>Turning transactional and panel data into market share, retention and competitive insights.</p>
+              <button type="button" class="project-open" data-project="consumer">Explore focus area <span aria-hidden="true">&#8594;</span></button>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art" aria-label="Sketch of a woman carrying data up stairs and loading it into a database">
+              <picture>
+                <source media="(prefers-reduced-motion: reduce)" srcset="./assets/data-ingestion-stairs-still.png">
+                <img src="./assets/data-ingestion-stairs-card.gif" alt="Data ingestion: a person climbs stairs to load data into a database" loading="lazy" width="560" height="340">
+              </picture>
+            </div>
+            <div class="project-copy">
+              <p class="project-number">FOCUS AREA 02</p>
+              <h3>Data Ingestion &amp; Automation</h3>
+              <p class="project-tags">Snowflake &nbsp;&middot;&nbsp; Databricks &nbsp;&middot;&nbsp; PySpark</p>
+              <p>Building pipelines and self-service workflows that make complex datasets easier to use.</p>
+              <button type="button" class="project-open" data-project="engineering">Explore focus area <span aria-hidden="true">&#8594;</span></button>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art" aria-label="Hand-drawn shopper adding a blue product to a shopping cart">
+              <picture>
+                <source media="(prefers-reduced-motion: reduce)" srcset="./assets/consumer-shopping-cart-still.png">
+                <img src="./assets/consumer-shopping-cart-card.gif" alt="A shopper places a product in a cart, representing consumer behavior analysis" loading="lazy" width="560" height="340">
+              </picture>
+            </div>
+            <div class="project-copy">
+              <p class="project-number">FOCUS AREA 03</p>
+              <h3>Shopper &amp; Retail Analytics</h3>
+              <p class="project-tags">Consumer panels &nbsp;&middot;&nbsp; E-receipts &nbsp;&middot;&nbsp; BI</p>
+              <p>Understanding shopper behavior and communicating the patterns behind commercial decisions.</p>
+              <button type="button" class="project-open" data-project="shopper">Explore focus area <span aria-hidden="true">&#8594;</span></button>
+            </div>
+          </article>
+        </div>
+        <p class="disclosure">The animations are conceptual illustrations. These sections summarize professional focus areas, not public client case studies or proprietary datasets.</p>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="container section-content">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">02 / THE JOURNEY</p>
+            <h2 id="experience-title" class="section-title sketch-heading">Experience <span class="sketch-underline" aria-hidden="true"></span></h2>
+          </div>
+          <span class="section-caption">From research to decision-making</span>
+        </div>
+        <div class="timeline-grid">
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="time-range">AUG 2025 &mdash; PRESENT</p>
+            <h3>Bain &amp; Company</h3>
+            <p class="role">Custom Data Analyst</p>
+            <p>Custom consumer and market analyses, self-service tools and scalable data pipelines.</p>
+            <span class="inline-stat">50+ consulting cases supported</span>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="time-range">AUG 2024 &mdash; AUG 2025</p>
+            <h3>NielsenIQ</h3>
+            <p class="role">Junior Data Analyst</p>
+            <p>KPI anomaly detection, data quality monitoring and root-cause analysis on consumer-panel data.</p>
+            <span class="inline-stat">Anomaly resolution: 3 days to 1</span>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="time-range">JAN 2021 &mdash; JAN 2022</p>
+            <h3>Consejo de la Comunicaci&oacute;n</h3>
+            <p class="role">Market Researcher</p>
+            <p>ESG benchmarking with Power BI and API data, plus research-backed business cases.</p>
+            <span class="inline-stat">20+ companies in ESG dashboard</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise-about section-cream" id="about" aria-labelledby="about-title">
+      <div class="container section-content split-section">
+        <div class="expertise-side">
+          <p class="section-kicker">03 / TOOLKIT &amp; CURIOSITY</p>
+          <h2 class="section-title sketch-heading" id="expertise-title">Expertise <span class="sketch-underline" aria-hidden="true"></span></h2>
+          <div class="expertise-grid" aria-labelledby="expertise-title">
+            <div class="skill"><span class="skill-icon">&#9719;</span><span>Consumer<br>analytics</span></div>
+            <div class="skill"><span class="skill-icon">&#9776;</span><span>Analytics<br>engineering</span></div>
+            <div class="skill"><span class="skill-icon">&#9670;</span><span>Data quality<br>&amp; governance</span></div>
+            <div class="skill"><span class="skill-icon">&#8979;</span><span>Predictive<br>analytics</span></div>
+            <div class="skill"><span class="skill-icon code-icon">&lt;/&gt;</span><span>SQL &amp; Python</span></div>
+            <div class="skill"><span class="skill-icon">&#9729;</span><span>Snowflake &amp;<br>Databricks</span></div>
+            <div class="skill"><span class="skill-icon">&#9638;</span><span>Power BI &amp;<br>Tableau</span></div>
+            <div class="skill"><span class="skill-icon">&#8767;</span><span>Statistical<br>modeling</span></div>
+          </div>
+        </div>
+        <div class="about-side">
+          <p class="section-kicker">04 / THE PERSON BEHIND THE DATA</p>
+          <h2 class="section-title sketch-heading" id="about-title">About me <span class="sketch-underline" aria-hidden="true"></span></h2>
+          <p>Hi, I'm Miriam. I'm a Data Analyst working across analytics engineering, consumer research and business problem-solving.</p>
+          <p>I enjoy connecting technical rigor with context and clear storytelling, turning complex datasets into insights people can actually use.</p>
+          <div class="about-facts">
+            <div><span class="fact-mark">&#10022;</span><span>MSc in Economics &mdash; Instituto Polit&eacute;cnico Nacional</span></div>
+            <div><span class="fact-mark">&#9678;</span><span>Based in Mexico City, Mexico</span></div>
+            <div><span class="fact-mark">&#9782;</span><span>Spanish (native) &middot; English (C1)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div>
+          <p class="section-kicker">05 / SAY HELLO</p>
+          <h2 id="contact-title">Let's make sense<br>of something <span class="contact-highlight">complex.</span></h2>
+          <p>Open to conversations about thoughtful analytics, better data products and meaningful insights.</p>
+          <div class="contact-actions">
+            <a class="button button-dark" href="mailto:migaliciama@gmail.com?subject=Hello%20Miriam%20-%20Portfolio">Get in touch <span aria-hidden="true">&#8594;</span></a>
+            <a class="text-link" href="https://www.linkedin.com/in/migaliciama/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+        <div class="contact-decoration" aria-hidden="true">
+          <svg viewBox="0 0 200 170"><path d="M20 130 Q52 111 77 115 Q102 110 125 80 Q155 41 181 24" fill="none" stroke="#217cce" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 2"/><g fill="#4d9bdf"><circle cx="20" cy="130" r="6"/><circle cx="77" cy="115" r="6"/><circle cx="125" cy="80" r="6"/><circle cx="181" cy="24" r="6"/></g><path d="M160 26 L181 24 L180 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand brand-footer" href="#home">MIRIAM GALICIA<span class="brand-period">.</span></a>
+      <span class="footer-line" aria-hidden="true"></span>
+      <p>&copy; <span id="current-year">2026</span> &nbsp; Built with curiosity and data.</p>
+      <div class="footer-links"><a href="https://www.linkedin.com/in/migaliciama/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:migaliciama@gmail.com">Email</a><a href="#home">Back to top &#8593;</a></div>
+    </div>
+  </footer>
+
+  <dialog id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <button type="button" class="dialog-close" aria-label="Close project details">&times;</button>
+      <p class="section-kicker" id="dialog-kicker"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description"></p>
+      <h3>What this work involves</h3>
+      <ul id="dialog-list"></ul>
+      <p class="dialog-note">Overview only. No client or proprietary datasets are published here.</p>
+    </div>
+  </dialog>
+</body>
+</html>
