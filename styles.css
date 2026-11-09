@@ -699,3 +699,41 @@ dialog ul { padding-left: 20px; }
   .beyond-art { max-width: 100px; }
   .beyond-title { font-size: 1.4rem; }
 }
+
+/* PORTADA - ajuste puntual: formula lateral e ilustracion protagonista.
+   No cambia animaciones, secciones, tipografia ni contenido. */
+@media (min-width: 1100px) {
+  .introduction-grid {
+    position: relative;
+    grid-template-columns: minmax(0, 1.18fr) minmax(330px, .92fr);
+    gap: clamp(18px, 3vw, 48px);
+  }
+  .intro-formula {
+    position: absolute;
+    top: 25%;
+    left: max(-132px, calc((1110px - 100vw) / 2 + 22px));
+    margin: 0;
+    font-size: clamp(.84rem, 1vw, 1.02rem);
+    transform: rotate(-4deg);
+  }
+  .intro-art-main { width: min(100%, 405px); max-width: none; }
+}
+@media (min-width: 1280px) and (max-width: 1380px) {
+  /* Keep it in the left margin without crossing into the title. */
+  .intro-formula {
+    top: 25%;
+    left: calc((1110px - 100vw) / 2 + 20px);
+    font-size: .8rem;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1279px) {
+  /* On narrower screens, tuck the note above the heading to avoid overlap. */
+  .intro-formula { top: 10px; left: 0; }
+}
+@media (min-width: 901px) and (max-width: 1099px) {
+  .introduction-grid {
+    grid-template-columns: minmax(0, 1.18fr) minmax(270px, .8fr);
+    gap: 18px;
+  }
+  .intro-art-main { width: min(100%, 330px); }
+}
