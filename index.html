@@ -19,7 +19,7 @@
     // Preserve light mode by default; restore the visitor's own choice.
     try { if (localStorage.getItem('mg-portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
   </script>
-<link href="./styles.css?v=20261109-formula-beyond-v1" rel="stylesheet"/>
+<link href="./styles.css?v=20261109-formula-editable-v2" rel="stylesheet"/>
 <script defer="" src="./script.js?v=20261109-dark-v1"></script>
 </head>
 <body>
@@ -49,7 +49,7 @@
 <main id="main">
 <section aria-labelledby="about-title" class="introduction section-cream" id="about">
 <div class="container introduction-grid">
-<div class="intro-copy"><p aria-label="Data plus curiosity equals impact" class="intro-formula"><span>Data</span><span>+ curiosity</span><span>= impact</span></p>
+<div class="intro-copy">
 <p class="section-kicker">01 / ABOUT ME <span class="intro-kicker-sep">·</span> DATA ANALYST / ANALYTICS ENGINEERING</p>
 <h1 id="about-title">Miriam Galicia<span class="brand-period">.</span></h1>
 <p class="intro-lead">I work across consumer analytics, analytics engineering and business problem-solving.</p>
@@ -62,6 +62,8 @@
 
 </div>
 <div class="intro-art intro-art-main">
+<!-- Formula editable: cambia solo el texto de estos tres spans; es HTML separado de la ilustracion. -->
+<p aria-label="Data plus curiosity equals impact" class="intro-formula"><span>Data</span><span>+ curiosity</span><span>= impact</span></p>
 <picture>
 <source media="(prefers-reduced-motion: reduce)" srcset="./assets/data-sketch-original-clean-still.png"/>
 <source srcset="./assets/data-sketch-original-clean.webp" type="image/webp"/>
