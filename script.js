@@ -83,3 +83,24 @@ if (dialog && typeof dialog.showModal === 'function') {
 }
 const year = document.querySelector('#current-year');
 if (year) year.textContent = new Date().getFullYear();
+
+
+// Simple accessible day/night switch; the default remains the original light design.
+const themeToggle = document.querySelector('.theme-toggle');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+function applyPortfolioTheme(mode) {
+  const dark = mode === 'dark';
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    themeToggle.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+  if (themeMeta) themeMeta.setAttribute('content', dark ? '#101113' : '#ffffff');
+}
+applyPortfolioTheme(document.documentElement.dataset.theme);
+if (themeToggle) themeToggle.addEventListener('click', () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyPortfolioTheme(next);
+  try { localStorage.setItem('mg-portfolio-theme', next); } catch (e) {}
+});

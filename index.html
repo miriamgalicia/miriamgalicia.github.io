@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fdfcf9">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="Miriam Galicia - Data Analyst and Analytics Engineering. Selected work in consumer analytics, data engineering, and data storytelling.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Miriam Galicia | Data Analyst">
@@ -13,8 +14,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20261106-contact-v4">
-  <script src="./script.js" defer></script>
+  <script>
+    // Preserve light mode by default; restore the visitor's own choice.
+    try { if (localStorage.getItem('mg-portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="./styles.css?v=20261109-dark-v1">
+  <script src="./script.js?v=20261109-dark-v1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -23,15 +28,21 @@
       <a class="brand" href="#home" aria-label="Miriam Galicia, home">MIRIAM GALICIA<span class="brand-period">.</span></a>
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
         <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#work">Work</a>
         <a class="nav-link" href="#experience">Experience</a>
-        <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
-      <a class="cv-link" href="./assets/Miriam_Galicia_CV_public.pdf?v=20261106-2" target="_blank" rel="noopener">CV <span aria-hidden="true">&#8599;</span></a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <a class="cv-link" href="./assets/Miriam_Galicia_CV_public.pdf?v=20261106-2" target="_blank" rel="noopener">CV <span aria-hidden="true">&#8599;</span></a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme">
+          <svg class="theme-icon theme-icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
+          <svg class="theme-icon theme-icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -54,7 +65,47 @@
           <source type="image/webp" srcset="./assets/data-sketch-original-clean.webp">
           <img class="hero-art" src="./assets/data-sketch-original.gif" alt="Original hand-sketched girl with glasses and an animated blue bar chart" width="513" height="512" fetchpriority="high">
         </picture>
-        <span class="hero-art-label" aria-hidden="true">fig. 01 / data sketch</span>
+      </div>
+    </section>
+
+    <section class="expertise-about section-cream" id="about" aria-labelledby="about-title">
+      <div class="container section-content split-section">
+        <div class="expertise-side">
+          <p class="section-kicker">TOOLKIT &amp; CURIOSITY</p>
+          <h2 class="section-title sketch-heading" id="expertise-title">Expertise <span class="sketch-underline" aria-hidden="true"></span></h2>
+          <div class="expertise-grid" aria-labelledby="expertise-title">
+            <div class="skill"><span class="skill-icon">&#9719;</span><span>Consumer<br>analytics</span></div>
+            <div class="skill"><span class="skill-icon">&#9776;</span><span>Analytics<br>engineering</span></div>
+            <div class="skill"><span class="skill-icon">&#9670;</span><span>Data quality<br>&amp; governance</span></div>
+            <div class="skill"><span class="skill-icon">&#8979;</span><span>Predictive<br>analytics</span></div>
+            <div class="skill"><span class="skill-icon code-icon">&lt;/&gt;</span><span>SQL &amp; Python</span></div>
+            <div class="skill"><span class="skill-icon">&#9729;</span><span>Snowflake &amp;<br>Databricks</span></div>
+            <div class="skill"><span class="skill-icon">&#9638;</span><span>Power BI &amp;<br>Tableau</span></div>
+            <div class="skill"><span class="skill-icon">&#8767;</span><span>Statistical<br>modeling</span></div>
+          </div>
+        </div>
+        <div class="about-side">
+          <p class="section-kicker">01 / THE PERSON BEHIND THE DATA</p>
+          <h2 class="section-title sketch-heading" id="about-title">About me <span class="sketch-underline" aria-hidden="true"></span></h2>
+          <p>Hi, I'm Miriam. I'm a Data Analyst working across analytics engineering, consumer research and business problem-solving.</p>
+          <p>I enjoy connecting technical rigor with context and clear storytelling, turning complex datasets into insights people can actually use.</p>
+          <div class="about-facts">
+            <div><span class="fact-mark">&#10022;</span><span>MSc in Economics &mdash; Instituto Polit&eacute;cnico Nacional</span></div>
+            <div><span class="fact-mark">&#9678;</span><span>Based in Mexico City, Mexico</span></div>
+            <div><span class="fact-mark">&#9782;</span><span>Spanish (native) &middot; English (C1) &middot; French (A1) &middot; German (A1)</span></div>
+          </div>
+          <div class="about-life">
+            <picture class="about-life-art">
+              <source media="(prefers-reduced-motion: reduce)" srcset="./assets/about-me-seis-facetas-clean-still.png">
+              <source type="image/webp" srcset="./assets/about-me-seis-facetas-clean.webp">
+              <img src="./assets/about-me-seis-facetas.gif" alt="Hand-drawn scenes of painting, music, nature, reading, movies, and exercise" loading="lazy" width="252" height="251">
+            </picture>
+            <div class="about-life-copy">
+              <p class="about-life-eyebrow">BEYOND THE DATA</p>
+              <p>Creative at heart. I recharge through painting, live music, nature, reading, films and staying active.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -62,7 +113,7 @@
       <div class="container section-content">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">01 / WHAT I'VE WORKED ON</p>
+            <p class="section-kicker">02 / WHAT I'VE WORKED ON</p>
             <h2 id="work-title" class="section-title sketch-heading">Selected work <span class="sketch-underline" aria-hidden="true"></span></h2>
           </div>
           <a class="section-more" href="#experience">Explore my experience <span aria-hidden="true">&#8594;</span></a>
@@ -125,7 +176,7 @@
       <div class="container section-content">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">02 / THE JOURNEY</p>
+            <p class="section-kicker">03 / THE JOURNEY</p>
             <h2 id="experience-title" class="section-title sketch-heading">Experience <span class="sketch-underline" aria-hidden="true"></span></h2>
           </div>
           <span class="section-caption">From research to decision-making</span>
@@ -159,51 +210,10 @@
       </div>
     </section>
 
-    <section class="expertise-about section-cream" id="about" aria-labelledby="about-title">
-      <div class="container section-content split-section">
-        <div class="expertise-side">
-          <p class="section-kicker">03 / TOOLKIT &amp; CURIOSITY</p>
-          <h2 class="section-title sketch-heading" id="expertise-title">Expertise <span class="sketch-underline" aria-hidden="true"></span></h2>
-          <div class="expertise-grid" aria-labelledby="expertise-title">
-            <div class="skill"><span class="skill-icon">&#9719;</span><span>Consumer<br>analytics</span></div>
-            <div class="skill"><span class="skill-icon">&#9776;</span><span>Analytics<br>engineering</span></div>
-            <div class="skill"><span class="skill-icon">&#9670;</span><span>Data quality<br>&amp; governance</span></div>
-            <div class="skill"><span class="skill-icon">&#8979;</span><span>Predictive<br>analytics</span></div>
-            <div class="skill"><span class="skill-icon code-icon">&lt;/&gt;</span><span>SQL &amp; Python</span></div>
-            <div class="skill"><span class="skill-icon">&#9729;</span><span>Snowflake &amp;<br>Databricks</span></div>
-            <div class="skill"><span class="skill-icon">&#9638;</span><span>Power BI &amp;<br>Tableau</span></div>
-            <div class="skill"><span class="skill-icon">&#8767;</span><span>Statistical<br>modeling</span></div>
-          </div>
-        </div>
-        <div class="about-side">
-          <p class="section-kicker">04 / THE PERSON BEHIND THE DATA</p>
-          <h2 class="section-title sketch-heading" id="about-title">About me <span class="sketch-underline" aria-hidden="true"></span></h2>
-          <p>Hi, I'm Miriam. I'm a Data Analyst working across analytics engineering, consumer research and business problem-solving.</p>
-          <p>I enjoy connecting technical rigor with context and clear storytelling, turning complex datasets into insights people can actually use.</p>
-          <div class="about-facts">
-            <div><span class="fact-mark">&#10022;</span><span>MSc in Economics &mdash; Instituto Polit&eacute;cnico Nacional</span></div>
-            <div><span class="fact-mark">&#9678;</span><span>Based in Mexico City, Mexico</span></div>
-            <div><span class="fact-mark">&#9782;</span><span>Spanish (native) &middot; English (C1)</span></div>
-          </div>
-          <div class="about-life">
-            <picture class="about-life-art">
-              <source media="(prefers-reduced-motion: reduce)" srcset="./assets/about-me-seis-facetas-clean-still.png">
-              <source type="image/webp" srcset="./assets/about-me-seis-facetas-clean.webp">
-              <img src="./assets/about-me-seis-facetas.gif" alt="Hand-drawn scenes of painting, music, nature, reading, movies, and exercise" loading="lazy" width="252" height="251">
-            </picture>
-            <div class="about-life-copy">
-              <p class="about-life-eyebrow">BEYOND THE DATA</p>
-              <p>Creative at heart. I recharge through painting, live music, nature, reading, films and staying active.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container contact-layout">
         <div>
-          <p class="section-kicker">05 / SAY HELLO</p>
+          <p class="section-kicker">04 / SAY HELLO</p>
           <h2 id="contact-title">Let's make sense<br>of something <span class="contact-highlight">complex.</span></h2>
           <p>Open to conversations about thoughtful analytics, better data products and meaningful insights.</p>
           <div class="contact-actions" role="group" aria-label="Ways to contact Miriam">
