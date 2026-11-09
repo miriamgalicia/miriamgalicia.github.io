@@ -571,3 +571,131 @@ dialog ul { padding-left: 20px; }
   .approach-art picture { max-width: 90px; }
   .approach-copy h2 { font-size: 1.64rem; }
 }
+
+
+/* 2026-11-09: refinements after Option 1 review.
+   Keep existing GIF/WebP frames and timing. Profile returns as main illustration;
+   hobbies live beside the About copy, and the Approach line moves into Work. */
+.introduction-grid { grid-template-columns: minmax(0,1.33fr) minmax(224px,.75fr); gap: clamp(20px,4.5vw,64px); min-height: 370px; }
+.intro-art-main { width: min(100%,280px); }
+.intro-copy h1 { font-size: clamp(2.75rem,5.2vw,4.35rem); }
+.intro-personal-layout {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; margin-top: 12px;
+}
+.intro-personal-layout .intro-personal { margin: 0; flex: 1; }
+.intro-mini-art {
+  flex: 0 0 auto; width: 102px; aspect-ratio: 1;
+  display: grid; place-items: center;
+}
+.intro-mini-art picture, .intro-mini-art img { display: block; width: 100%; height: auto; }
+.work-tagline {
+  margin: 11px 0 0; font-family: var(--body-font);
+  font-size: clamp(1.02rem,1.8vw,1.34rem); line-height: 1.4;
+  letter-spacing: -.028em; font-weight: 600; color: var(--ink);
+}
+.work-tagline-blue { color: var(--blue); }
+.work-section .section-heading { align-items: center; gap: 22px; }
+/* Dark ink should feel like soft pencil, never high-contrast white neon.
+   Recolor existing transparent drawings with CSS only (no replacement art). */
+[data-theme="dark"] .intro-art-main picture,
+[data-theme="dark"] .intro-mini-art picture,
+[data-theme="dark"] .project-art picture,
+[data-theme="dark"] .contact-decoration picture {
+  filter: invert(1) hue-rotate(180deg) brightness(.94) contrast(.82);
+  opacity: .80;
+}
+[data-theme="dark"] .intro-mini-art { width: 90px; }
+[data-theme="dark"] .intro-mini-art picture { opacity: .89; }
+@media (max-width: 900px) {
+  .intro-art-main { width: min(100%,220px); }
+  .intro-mini-art { width: 90px; }
+  [data-theme="dark"] .intro-mini-art { width: 82px; }
+}
+@media (max-width: 630px) {
+  .introduction-grid { display: grid; grid-template-columns: 1fr; gap: 5px; padding-block: 28px 25px; }
+  .intro-art-main { width: 100%; max-width: 176px; margin: 0 auto 4px; }
+  .intro-personal-layout { gap: 10px; margin-top: 12px; }
+  .intro-mini-art { width: 78px; }
+  [data-theme="dark"] .intro-mini-art { width: 72px; }
+  .work-section .section-heading { align-items: start; }
+  .work-tagline { font-size: 1rem; line-height: 1.45; margin-top: 8px; }
+}
+@media (max-width: 380px) {
+  .intro-art-main { max-width: 152px; }
+  .intro-mini-art { width: 70px; }
+  [data-theme="dark"] .intro-mini-art { width: 66px; }
+}
+
+/* 2026-11-09: revive the original handwritten formula and keep the homepage quiet. */
+.intro-formula {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 0 16px;
+  color: #3689ce;
+  font-family: var(--hand-font);
+  font-size: clamp(.97rem, 1.4vw, 1.15rem);
+  line-height: 1.14;
+  letter-spacing: -.015em;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
+.intro-formula span:nth-child(2) { padding-left: 5px; }
+.intro-formula span:nth-child(3) { padding-left: 16px; }
+[data-theme="dark"] .intro-formula { color: #8fc6f3; }
+
+/* The six-facets original animation is now a subtle, meaningful after-work coda. */
+.beyond-section { border-top: 1px solid var(--line); }
+.beyond-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: clamp(24px, 5vw, 80px);
+  max-width: 900px;
+  padding-block: 38px 38px;
+}
+.beyond-copy { min-width: 0; }
+.beyond-copy .section-kicker { margin-bottom: 9px; }
+.beyond-title {
+  font-family: var(--body-font);
+  font-size: clamp(1.7rem, 2.55vw, 2.3rem);
+  line-height: 1.2;
+  letter-spacing: -.047em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.beyond-copy > p:last-child {
+  max-width: 520px;
+  font-size: .91rem;
+  color: var(--muted);
+  line-height: 1.68;
+  margin-bottom: 0;
+}
+.beyond-art { width: 100%; max-width: 192px; justify-self: center; }
+.beyond-art picture, .beyond-art img { display: block; width: 100%; height: auto; }
+[data-theme="dark"] .beyond-copy > p:last-child { color: #b9c0c7; }
+[data-theme="dark"] .beyond-art picture {
+  filter: invert(1) hue-rotate(180deg) brightness(.94) contrast(.82);
+  opacity: .80;
+}
+/* Keep the new Contact portrait subtle and avoid a full-size panel of illustration. */
+.contact-decoration picture { width: 100%; max-width: 285px; }
+.contact-decoration .contact-art { width: 100%; height: auto; object-fit: contain; }
+@media (max-width: 780px) {
+  .beyond-layout { grid-template-columns: minmax(0,1fr) 175px; gap: 20px; }
+  .beyond-art { max-width: 155px; }
+}
+@media (max-width: 630px) {
+  .intro-formula { font-size: .94rem; margin-bottom: 12px; }
+  .beyond-layout { grid-template-columns: minmax(0,1fr) 120px; padding-block: 29px 30px; gap: 8px; }
+  .beyond-art { max-width: 118px; }
+  .beyond-title { font-size: 1.55rem; }
+  .beyond-copy > p:last-child { font-size: .79rem; line-height: 1.6; }
+  .contact-decoration picture { max-width: 188px; }
+}
+@media (max-width: 380px) {
+  .beyond-layout { grid-template-columns: minmax(0,1fr) 100px; gap: 6px; }
+  .beyond-art { max-width: 100px; }
+  .beyond-title { font-size: 1.4rem; }
+}
