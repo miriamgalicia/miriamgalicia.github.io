@@ -18,17 +18,17 @@
     // Preserve light mode by default; restore the visitor's own choice.
     try { if (localStorage.getItem('mg-portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="./styles.css?v=20261109-dark-v1">
+  <link rel="stylesheet" href="./styles.css?v=20261109-option1-v1">
   <script src="./script.js?v=20261109-dark-v1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Miriam Galicia, home">MIRIAM GALICIA<span class="brand-period">.</span></a>
+      <a class="brand" href="#about" aria-label="Miriam Galicia, home">MIRIAM GALICIA<span class="brand-period">.</span></a>
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a class="nav-link active" href="#home">Home</a>
-        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link active" href="#about">About</a>
+        <a class="nav-link" href="#toolkit">Toolkit</a>
         <a class="nav-link" href="#work">Work</a>
         <a class="nav-link" href="#experience">Experience</a>
         <a class="nav-link" href="#contact">Contact</a>
@@ -47,33 +47,40 @@
   </header>
 
   <main id="main">
-    <section class="hero container" id="home" aria-labelledby="hero-title">
-      <div class="hero-note" aria-hidden="true">Data<br>+ curiosity<br>= impact</div>
-      <div class="hero-content">
-        <p class="eyebrow"><span class="eyebrow-line"></span> DATA ANALYST <span class="dot-divider">/</span> ANALYTICS ENGINEERING</p>
-        <h1 id="hero-title">Finding stories<br>hidden in <span class="headline-swoosh">data.</span></h1>
-        <p class="hero-description">I transform complex data into clear insights, practical tools, and better business decisions.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#work">View my work <span aria-hidden="true">&#8594;</span></a>
-          <a class="text-link" href="#about">A little about me <span aria-hidden="true">&#8599;</span></a>
+    <section class="introduction section-cream" id="about" aria-labelledby="about-title">
+      <div class="container introduction-grid">
+        <div class="intro-copy">
+          <p class="section-kicker">01 / ABOUT ME <span class="intro-kicker-sep">&#183;</span> DATA ANALYST / ANALYTICS ENGINEERING</p>
+          <h1 id="about-title">Creative at heart<span class="brand-period">.</span></h1>
+          <p class="intro-lead">Hi, I'm Miriam. I work across consumer analytics, analytics engineering and business problem-solving.</p>
+          <p class="intro-body">I enjoy connecting technical rigor with context and clear storytelling, turning complex datasets into insights people can actually use.</p>
+          <div class="about-facts intro-facts">
+            <div><span class="fact-mark" aria-hidden="true">&#10022;</span><span>MSc in Economics &mdash; Instituto Polit&eacute;cnico Nacional</span></div>
+            <div><span class="fact-mark" aria-hidden="true">&#9678;</span><span>Based in Mexico City, Mexico</span></div>
+            <div><span class="fact-mark" aria-hidden="true">&#9782;</span><span>Spanish (native) &middot; English (C1) &middot; French (A1) &middot; German (A1)</span></div>
+          </div>
+          <p class="intro-personal"><strong>Beyond the data</strong> &mdash; painting, live music, nature, reading, films and staying active.</p>
         </div>
-        <p class="hero-footnote">Consumer analytics <span aria-hidden="true">&#183;</span> Data engineering <span aria-hidden="true">&#183;</span> Storytelling</p>
-      </div>
-      <div class="hero-visual">
-        <picture>
-          <source srcset="./assets/data-sketch-original-clean-still.png" media="(prefers-reduced-motion: reduce)">
-          <source type="image/webp" srcset="./assets/data-sketch-original-clean.webp">
-          <img class="hero-art" src="./assets/data-sketch-original.gif" alt="Original hand-sketched girl with glasses and an animated blue bar chart" width="513" height="512" fetchpriority="high">
-        </picture>
+        <div class="intro-art">
+          <picture>
+            <source media="(prefers-reduced-motion: reduce)" srcset="./assets/about-me-seis-facetas-clean-still.png">
+            <source type="image/webp" srcset="./assets/about-me-seis-facetas-clean.webp">
+            <img src="./assets/about-me-seis-facetas.gif" alt="Hand-drawn animation of Miriam painting, at concerts, traveling in nature, reading, watching movies and exercising" width="252" height="251" fetchpriority="high">
+          </picture>
+        </div>
       </div>
     </section>
 
-    <section class="expertise-about section-cream" id="about" aria-labelledby="about-title">
-      <div class="container section-content split-section">
-        <div class="expertise-side">
-          <p class="section-kicker">TOOLKIT &amp; CURIOSITY</p>
-          <h2 class="section-title sketch-heading" id="expertise-title">Expertise <span class="sketch-underline" aria-hidden="true"></span></h2>
-          <div class="expertise-grid" aria-labelledby="expertise-title">
+    <section class="toolkit-section" id="toolkit" aria-labelledby="toolkit-title">
+      <div class="container section-content toolkit-inner">
+        <div class="toolkit-header">
+          <div>
+            <p class="section-kicker">02 / TOOLKIT</p>
+            <h2 class="section-title" id="toolkit-title">Tools I use<span class="brand-period">.</span></h2>
+          </div>
+          <p class="toolkit-description">A mix of data tools, analytical methods and technologies that help turn complex questions into clear answers.</p>
+        </div>
+        <div class="expertise-grid toolkit-grid" aria-label="Analytical specialties and tools">
             <div class="skill"><span class="skill-icon">&#9719;</span><span>Consumer<br>analytics</span></div>
             <div class="skill"><span class="skill-icon">&#9776;</span><span>Analytics<br>engineering</span></div>
             <div class="skill"><span class="skill-icon">&#9670;</span><span>Data quality<br>&amp; governance</span></div>
@@ -82,29 +89,24 @@
             <div class="skill"><span class="skill-icon">&#9729;</span><span>Snowflake &amp;<br>Databricks</span></div>
             <div class="skill"><span class="skill-icon">&#9638;</span><span>Power BI &amp;<br>Tableau</span></div>
             <div class="skill"><span class="skill-icon">&#8767;</span><span>Statistical<br>modeling</span></div>
-          </div>
         </div>
-        <div class="about-side">
-          <p class="section-kicker">01 / THE PERSON BEHIND THE DATA</p>
-          <h2 class="section-title sketch-heading" id="about-title">About me <span class="sketch-underline" aria-hidden="true"></span></h2>
-          <p>Hi, I'm Miriam. I'm a Data Analyst working across analytics engineering, consumer research and business problem-solving.</p>
-          <p>I enjoy connecting technical rigor with context and clear storytelling, turning complex datasets into insights people can actually use.</p>
-          <div class="about-facts">
-            <div><span class="fact-mark">&#10022;</span><span>MSc in Economics &mdash; Instituto Polit&eacute;cnico Nacional</span></div>
-            <div><span class="fact-mark">&#9678;</span><span>Based in Mexico City, Mexico</span></div>
-            <div><span class="fact-mark">&#9782;</span><span>Spanish (native) &middot; English (C1) &middot; French (A1) &middot; German (A1)</span></div>
-          </div>
-          <div class="about-life">
-            <picture class="about-life-art">
-              <source media="(prefers-reduced-motion: reduce)" srcset="./assets/about-me-seis-facetas-clean-still.png">
-              <source type="image/webp" srcset="./assets/about-me-seis-facetas-clean.webp">
-              <img src="./assets/about-me-seis-facetas.gif" alt="Hand-drawn scenes of painting, music, nature, reading, movies, and exercise" loading="lazy" width="252" height="251">
-            </picture>
-            <div class="about-life-copy">
-              <p class="about-life-eyebrow">BEYOND THE DATA</p>
-              <p>Creative at heart. I recharge through painting, live music, nature, reading, films and staying active.</p>
-            </div>
-          </div>
+      </div>
+    </section>
+
+    <section class="approach-section section-cream" id="approach" aria-labelledby="approach-title">
+      <div class="container approach-layout">
+        <div class="approach-copy">
+          <p class="section-kicker">03 / MY APPROACH</p>
+          <h2 id="approach-title">Finding stories<br>hidden in <span class="headline-swoosh approach-blue">data.</span></h2>
+          <p>I transform complex data into clear insights, practical tools, and better business decisions.</p>
+          <a class="text-link" href="#work">Explore selected work <span aria-hidden="true">&#8594;</span></a>
+        </div>
+        <div class="approach-art">
+          <picture>
+            <source media="(prefers-reduced-motion: reduce)" srcset="./assets/data-sketch-original-clean-still.png">
+            <source type="image/webp" srcset="./assets/data-sketch-original-clean.webp">
+            <img src="./assets/data-sketch-original.gif" alt="Original hand-drawn woman with glasses and a small animated blue bar chart" width="513" height="512" loading="lazy">
+          </picture>
         </div>
       </div>
     </section>
@@ -113,7 +115,7 @@
       <div class="container section-content">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">02 / WHAT I'VE WORKED ON</p>
+            <p class="section-kicker">04 / WHAT I'VE WORKED ON</p>
             <h2 id="work-title" class="section-title sketch-heading">Selected work <span class="sketch-underline" aria-hidden="true"></span></h2>
           </div>
           <a class="section-more" href="#experience">Explore my experience <span aria-hidden="true">&#8594;</span></a>
@@ -176,7 +178,7 @@
       <div class="container section-content">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">03 / THE JOURNEY</p>
+            <p class="section-kicker">05 / THE JOURNEY</p>
             <h2 id="experience-title" class="section-title sketch-heading">Experience <span class="sketch-underline" aria-hidden="true"></span></h2>
           </div>
           <span class="section-caption">From research to decision-making</span>
@@ -213,7 +215,7 @@
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container contact-layout">
         <div>
-          <p class="section-kicker">04 / SAY HELLO</p>
+          <p class="section-kicker">06 / SAY HELLO</p>
           <h2 id="contact-title">Let's make sense<br>of something <span class="contact-highlight">complex.</span></h2>
           <p>Open to conversations about thoughtful analytics, better data products and meaningful insights.</p>
           <div class="contact-actions" role="group" aria-label="Ways to contact Miriam">
@@ -244,10 +246,10 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="brand brand-footer" href="#home">MIRIAM GALICIA<span class="brand-period">.</span></a>
+      <a class="brand brand-footer" href="#about">MIRIAM GALICIA<span class="brand-period">.</span></a>
       <span class="footer-line" aria-hidden="true"></span>
       <p>&copy; <span id="current-year">2026</span> &nbsp; Built with curiosity and data.</p>
-      <div class="footer-links"><a href="https://www.linkedin.com/in/migaliciama/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:migaliciama@gmail.com">Email</a><a href="#home">Back to top &#8593;</a></div>
+      <div class="footer-links"><a href="https://www.linkedin.com/in/migaliciama/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:migaliciama@gmail.com">Email</a><a href="#about">Back to top &#8593;</a></div>
     </div>
   </footer>
 
