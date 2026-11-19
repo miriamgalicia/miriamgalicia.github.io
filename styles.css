@@ -775,7 +775,7 @@ dialog ul { padding-left: 20px; }
 
 .tk-art { display: grid; place-items: center; padding: 6px 0; }
 .tk-art picture, .tk-art img { display: block; width: 100%; height: auto; }
-.tk-art picture { width: min(100%, 250px); }
+.tk-art picture { width: min(100%, 185px); }
 
 [data-theme="dark"] .tk-tile { background: #1b1d20; border-color: #36393d; }
 [data-theme="dark"] .tk-sql { background: rgba(77,160,235,.07); border-color: rgba(77,160,235,.5); }
@@ -788,17 +788,29 @@ dialog ul { padding-left: 20px; }
   .tk-ring { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: auto; grid-template-areas: none; }
   .tk-ring > * { grid-area: auto; }
   .tk-ring > .tk-art { grid-column: 1 / -1; order: -1; padding: 0 0 8px; }
-  .tk-art picture { width: min(100%, 210px); }
+  .tk-art picture { width: min(100%, 160px); }
   .tk-tile { min-height: 104px; }
 }
 /* phone: one column */
 @media (max-width: 600px) {
   .tk-ring { grid-template-columns: 1fr; gap: 9px; margin-top: 18px; }
   .tk-tile { padding: 12px 14px; column-gap: 12px; min-height: 0; }
-  .tk-art picture { width: min(100%, 180px); }
+  .tk-art picture { width: min(100%, 140px); }
 }
 
 /* line under the Toolkit title */
 .tk-desc { margin: 10px 0 0; font-size: .9rem; line-height: 1.6; color: var(--muted); max-width: 520px; }
 [data-theme="dark"] .tk-desc { color: #b9c0c7; }
 @media (max-width: 600px) { .tk-desc { font-size: .84rem; } }
+
+/* Match the hero drawing: thicker, slightly rough marker line, and a soft chalk grey in dark mode */
+.tk-art picture { filter: url(#crayon); }
+[data-theme="dark"] .tk-art picture { filter: url(#crayon) invert(1) hue-rotate(180deg) brightness(.74); }
+
+/* Title above the illustration, line below it — one centered group */
+.tk-art { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 0; }
+.tk-art .tk-head { display: flex; flex-direction: column; align-items: center; }
+.tk-art .section-kicker { margin-bottom: 6px; }
+.tk-art .sketch-heading { font-size: clamp(1.9rem, 2.6vw, 2.35rem); }
+.tk-art .tk-desc { margin: 4px 0 0; max-width: 240px; font-size: .84rem; line-height: 1.55; color: var(--muted); }
+[data-theme="dark"] .tk-art .tk-desc { color: #b9c0c7; }

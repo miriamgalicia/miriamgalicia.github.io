@@ -19,10 +19,22 @@
     // Preserve light mode by default; restore the visitor's own choice.
     try { if (localStorage.getItem('mg-portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
   </script>
-<link href="./styles.css?v=20261119-toolkit-v7" rel="stylesheet"/>
+<link href="./styles.css?v=20261119-toolkit-v10" rel="stylesheet"/>
 <script defer="" src="./script.js?v=20261109-dark-v1"></script>
 </head>
 <body>
+<svg aria-hidden="true" focusable="false" height="0" style="position:absolute;width:0;height:0" width="0">
+<defs>
+<filter color-interpolation-filters="sRGB" height="106%" id="crayon" width="106%" x="-3%" y="-3%">
+<feMorphology in="SourceGraphic" operator="dilate" radius="0.45" result="thick"/>
+<feTurbulence baseFrequency="0.09" numOctaves="2" result="wob" seed="4" type="fractalNoise"/>
+<feDisplacementMap in="thick" in2="wob" result="wobbled" scale="1.3" xChannelSelector="R" yChannelSelector="G"/>
+<feTurbulence baseFrequency="0.8" numOctaves="2" result="grain" seed="9" type="fractalNoise"/>
+<feColorMatrix in="grain" result="grainA" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 2.65"/>
+<feComposite in="wobbled" in2="grainA" operator="in"/>
+</filter>
+</defs>
+</svg>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
 <div class="container header-inner">
@@ -72,22 +84,20 @@
 </section>
 <section aria-labelledby="toolkit-title" class="toolkit-section" id="toolkit">
 <div class="container section-content toolkit-inner">
-<div class="toolkit-header">
-<div>
-<p class="section-kicker">TOOLKIT</p>
-<h2 class="section-title" id="toolkit-title">Tools I use<span class="brand-period">.</span></h2>
-<p class="tk-desc">A mix of tools for data analysis, engineering, visualization and modeling.</p>
-</div>
-</div>
 <div aria-label="Skills and tools" class="tk-ring">
 <div class="tk-tile a-python"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 3C8.6 3 8.8 4.5 8.8 4.5V7H12v1H6.6S4 7.7 4 11.4 6.2 15 6.2 15H8v-2.6S7.9 10 10.3 10H14s2.2.1 2.2-2.1V5S16.6 3 12 3z"/><path d="M12 21c3.4 0 3.2-1.5 3.2-1.5V17H12v-1h5.4s2.6.3 2.6-3.4-2.2-3.6-2.2-3.6H16v2.6s.1 2.4-2.3 2.4H10s-2.2-.1-2.2 2.1v2.9S7.4 21 12 21z"/><circle cx="9.9" cy="5.2" fill="currentColor" r=".6" stroke="none"/><circle cx="14.1" cy="18.8" fill="currentColor" r=".6" stroke="none"/></svg><div class="tk-txt"><span class="tk-name">Python</span><span class="tk-tools"><span class="tk-t">pandas</span> <span class="tk-t">NumPy</span> <span class="tk-t">seaborn</span> <span class="tk-t">Plotly</span> <span class="tk-t">Streamlit</span></span></div></div>
 <div class="tk-tile a-sql tk-sql"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14" x2="10" y1="5" y2="19"/></svg><div class="tk-txt"><span class="tk-name">SQL</span><span class="tk-tools"><span class="tk-t">DDL</span> <span class="tk-t">DML</span> <span class="tk-t">DQL</span> <span class="tk-t">CTEs</span> <span class="tk-t">Window functions</span> <span class="tk-t">PK / FK</span></span></div></div>
 <div class="tk-art a-art">
+<div class="tk-head">
+<p class="section-kicker">TOOLKIT</p>
+<h2 class="section-title sketch-heading" id="toolkit-title">Tools I use <span aria-hidden="true" class="sketch-underline"></span></h2>
+</div>
 <picture>
 <source media="(prefers-reduced-motion: reduce)" srcset="./assets/tools-woman-drilling-clean-still.png"/>
 <source srcset="./assets/tools-woman-drilling-clean.webp" type="image/webp"/>
 <img alt="Hand-drawn woman with glasses drilling into a blue pie chart" height="508" loading="lazy" src="./assets/tools-woman-drilling.gif" width="506"/>
 </picture>
+<p class="tk-desc">for data analysis, engineering, visualization and modeling</p>
 </div>
 <div class="tk-tile a-analytics"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15.5 3.4A9 9 0 0 1 20.6 8.5H15.5z"/></svg><div class="tk-txt"><span class="tk-name">Analytics</span><span class="tk-tools"><span class="tk-t">Market share</span> <span class="tk-t">Share of wallet</span> <span class="tk-t">Retention &amp; cohorts</span> <span class="tk-t">Customer overlap</span> <span class="tk-t">Sales trends</span> <span class="tk-t">Consumer panels</span> <span class="tk-t">Card &amp; e-receipt data</span> <span class="tk-t">First-party data</span></span></div></div>
 <div class="tk-tile a-dq"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="m3 12.2 9 5 9-5"/><path d="m3 16.2 9 5 9-5"/></svg><div class="tk-txt"><span class="tk-name">Data quality</span><span class="tk-tools"><span class="tk-t">Profiling</span> <span class="tk-t">Cleaning</span> <span class="tk-t">Standardization</span> <span class="tk-t">Validation</span> <span class="tk-t">Deduplication</span> <span class="tk-t">Outlier detection</span> <span class="tk-t">Monitoring</span> <span class="tk-t">Governance</span> <span class="tk-t">Anomaly detection</span></span></div></div>
