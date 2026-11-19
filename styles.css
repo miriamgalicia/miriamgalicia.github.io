@@ -737,3 +737,62 @@ dialog ul { padding-left: 20px; }
   }
   .intro-art-main { width: min(100%, 330px); }
 }
+
+/* ============================================================
+   Toolkit v3 — bento cards with tags, featured SQL, grouped Analytics
+   ============================================================ */
+.tk-grid { margin-top: 24px; display: grid; gap: 11px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tk-card {
+  position: relative; display: flex; flex-direction: column; gap: 14px; min-width: 0;
+  padding: 18px 20px 20px; border: 1px solid var(--line); border-radius: 11px; background: var(--paper);
+}
+.tk-wide { grid-column: span 2; }
+.tk-full { grid-column: 1 / -1; }
+.tk-head { display: flex; align-items: center; gap: 10px; }
+.tk-icon { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; font-family: var(--hand-font); font-size: 1.5rem; line-height: 1; color: var(--blue-dark); }
+.tk-icon.code-icon { font-family: ui-monospace, monospace; font-size: .94rem; font-weight: 700; }
+.tk-title { margin: 0; font-size: .95rem; font-weight: 650; letter-spacing: -.01em; color: var(--ink); }
+.tk-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tk-tags li { font-size: .74rem; line-height: 1; padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; color: #4d5863; }
+
+/* SQL: the one I use the most */
+.tk-featured { border-color: var(--blue); background: linear-gradient(180deg, rgba(36,123,200,.07), rgba(36,123,200,0) 65%), var(--paper); }
+.tk-featured .tk-title { font-size: 1.15rem; }
+.tk-featured .tk-tags { gap: 8px; }
+.tk-featured .tk-tags li { font-size: .84rem; padding: 9px 14px; border-color: rgba(36,123,200,.35); color: var(--blue-dark); font-weight: 500; }
+.tk-badge { position: absolute; top: 16px; right: 18px; font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-dark); background: rgba(36,123,200,.1); padding: 4px 10px; border-radius: 999px; }
+
+/* Analytics: Consumer | Market | Panel */
+.tk-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tk-group { padding: 0 22px; border-left: 1px solid var(--line); }
+.tk-group:first-child { padding-left: 0; border-left: 0; }
+.tk-group:last-child { padding-right: 0; }
+.tk-group h4 { margin: 0 0 10px; font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue-dark); }
+.tk-group ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+.tk-group li { font-size: .84rem; line-height: 1.35; color: var(--ink); }
+
+/* dark mode */
+[data-theme="dark"] .tk-card { background: #1b1d20; border-color: #36393d; }
+[data-theme="dark"] .tk-featured { border-color: var(--blue); background: linear-gradient(180deg, rgba(77,160,235,.12), rgba(77,160,235,0) 65%), #1b1d20; }
+[data-theme="dark"] .tk-icon, [data-theme="dark"] .tk-group h4 { color: var(--blue); }
+[data-theme="dark"] .tk-tags li { color: #b9c0c7; border-color: #36393d; }
+[data-theme="dark"] .tk-featured .tk-tags li { color: var(--blue); border-color: rgba(77,160,235,.45); }
+[data-theme="dark"] .tk-badge { color: var(--blue); background: rgba(77,160,235,.14); }
+[data-theme="dark"] .tk-group { border-color: #36393d; }
+[data-theme="dark"] .tk-group li { color: #d9dee3; }
+
+/* tablet: two columns */
+@media (max-width: 900px) {
+  .tk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tk-wide, .tk-solo { grid-column: 1 / -1; }
+}
+/* phone: one column, Analytics groups stack */
+@media (max-width: 630px) {
+  .tk-grid { grid-template-columns: 1fr; gap: 9px; margin-top: 17px; }
+  .tk-card { padding: 16px 16px 18px; }
+  .tk-groups { grid-template-columns: 1fr; }
+  .tk-group, .tk-group:first-child, .tk-group:last-child { padding: 14px 0 0; margin-top: 14px; border-left: 0; border-top: 1px solid var(--line); }
+  .tk-group:first-child { padding-top: 0; margin-top: 0; border-top: 0; }
+  [data-theme="dark"] .tk-group { border-color: #36393d; }
+  .tk-badge { top: 14px; right: 14px; }
+}

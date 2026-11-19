@@ -19,7 +19,7 @@
     // Preserve light mode by default; restore the visitor's own choice.
     try { if (localStorage.getItem('mg-portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
   </script>
-<link href="./styles.css?v=20261109-formula-editable-v2" rel="stylesheet"/>
+<link href="./styles.css?v=20261119-toolkit-v3" rel="stylesheet"/>
 <script defer="" src="./script.js?v=20261109-dark-v1"></script>
 </head>
 <body>
@@ -52,7 +52,7 @@
 <div class="intro-copy">
 <p class="section-kicker">ABOUT ME <span class="intro-kicker-sep">·</span> DATA ANALYST / ANALYTICS ENGINEERING</p>
 <h1 id="about-title">Miriam Galicia<span class="brand-period">.</span></h1>
-<p class="intro-lead" style="text-wrap:pretty">Hiiii, I’m a Custom Data Analyst with 3+ years in consulting and consumer research, turning messy data into answers about how consumers behave and how markets move.</p>
+<p class="intro-lead" style="text-wrap:pretty">Hii! I’m a Custom Data Analyst with 3+ years in consulting and consumer research, turning messy data into answers about how consumers behave and how markets move.</p>
 <p class="intro-body">…and I’m so happy you’re here! This is my portfolio, all in one place: my experience, what I studied, a few things I enjoy outside of work, and how to reach me. You’ll find my CV at the top, and there’s a night mode if you prefer. Welcome :)</p>
 <div class="about-facts intro-facts">
 <div><span aria-hidden="true" class="fact-mark">◎</span><span>Mexico City · Projects across North America, LATAM, Europe and APAC</span></div>
@@ -77,17 +77,48 @@
 <p class="section-kicker">TOOLKIT</p>
 <h2 class="section-title" id="toolkit-title">Tools I use<span class="brand-period">.</span></h2>
 </div>
-<p class="toolkit-description">A mix of data tools, analytical methods and technologies that help turn complex questions into clear answers.</p>
 </div>
-<div aria-label="Analytical specialties and tools" class="expertise-grid toolkit-grid">
-<div class="skill"><span class="skill-icon">◷</span><span>Consumer<br/>analytics</span></div>
-<div class="skill"><span class="skill-icon">☰</span><span>Analytics<br/>engineering</span></div>
-<div class="skill"><span class="skill-icon">◆</span><span>Data quality<br/>&amp; governance</span></div>
-<div class="skill"><span class="skill-icon">⌓</span><span>Predictive<br/>analytics</span></div>
-<div class="skill"><span class="skill-icon code-icon">&lt;/&gt;</span><span>SQL &amp; Python</span></div>
-<div class="skill"><span class="skill-icon">☁</span><span>Snowflake &amp;<br/>Databricks</span></div>
-<div class="skill"><span class="skill-icon">▦</span><span>Power BI &amp;<br/>Tableau</span></div>
-<div class="skill"><span class="skill-icon">∿</span><span>Statistical<br/>modeling</span></div>
+<div aria-label="Skills and tools" class="tk-grid">
+<article class="tk-card tk-wide tk-featured"><span class="tk-badge">Most used</span>
+<div class="tk-head"><span aria-hidden="true" class="tk-icon code-icon">&lt;/&gt;</span><h3 class="tk-title">SQL</h3></div>
+<ul class="tk-tags"><li>DDL</li><li>DML</li><li>DQL</li><li>CTEs</li><li>Window functions</li><li>PK / FK</li></ul>
+</article>
+<article class="tk-card tk-solo">
+<div class="tk-head"><span aria-hidden="true" class="tk-icon">λ</span><h3 class="tk-title">Python</h3></div>
+<ul class="tk-tags"><li>pandas</li><li>NumPy</li><li>seaborn</li><li>Plotly</li><li>Streamlit</li></ul>
+</article>
+<article class="tk-card tk-full">
+<div class="tk-head"><span aria-hidden="true" class="tk-icon">◷</span><h3 class="tk-title">Analytics</h3></div>
+<div class="tk-groups">
+<div class="tk-group"><h4>Consumer</h4><ul><li>Retention &amp; cohorts</li><li>Share of wallet</li><li>Customer overlap</li><li>Shopper behavior</li></ul></div>
+<div class="tk-group"><h4>Market</h4><ul><li>Market share</li><li>Competitive benchmarking</li><li>Sales trends</li><li>Opportunity sizing</li></ul></div>
+<div class="tk-group"><h4>Panel</h4><ul><li>Consumer panels</li><li>Card-transaction data</li><li>E-receipts</li><li>First-party data (online &amp; offline)</li></ul></div>
+</div>
+</article>
+<article class="tk-card ">
+<div class="tk-head"><span aria-hidden="true" class="tk-icon">◆</span><h3 class="tk-title">Data quality</h3></div>
+<ul class="tk-tags"><li>Profiling</li><li>Cleaning</li><li>Standardization</li><li>Validation</li><li>Deduplication</li><li>Outlier detection</li><li>Monitoring</li><li>Governance</li><li>Anomaly detection</li></ul>
+</article>
+<article class="tk-card ">
+<div class="tk-head"><span aria-hidden="true" class="tk-icon">☰</span><h3 class="tk-title">Analytics engineering</h3></div>
+<ul class="tk-tags"><li>PySpark</li><li>Databricks</li><li>Snowflake</li><li>Azure</li><li>ETL pipelines</li><li>APIs</li><li>Automation</li></ul>
+</article>
+<article class="tk-card ">
+<div class="tk-head"><span aria-hidden="true" class="tk-icon">▦</span><h3 class="tk-title">Visualization</h3></div>
+<ul class="tk-tags"><li>Power BI</li><li>Tableau</li><li>Advanced Excel</li><li>Altair</li><li>Data storytelling</li></ul>
+</article>
+<article class="tk-card ">
+<div class="tk-head"><span aria-hidden="true" class="tk-icon">∿</span><h3 class="tk-title">Statistical modeling</h3></div>
+<ul class="tk-tags"><li>Inference</li><li>A/B testing</li><li>Hypothesis testing</li><li>Regression</li><li>Panel data</li><li>ARIMA / SARIMA forecasting</li></ul>
+</article>
+<article class="tk-card ">
+<div class="tk-head"><span aria-hidden="true" class="tk-icon">⌓</span><h3 class="tk-title">Predictive analytics</h3></div>
+<ul class="tk-tags"><li>Linear regression</li><li>scikit-learn</li></ul>
+</article>
+<article class="tk-card ">
+<div class="tk-head"><span aria-hidden="true" class="tk-icon">✧</span><h3 class="tk-title">Generative AI</h3></div>
+<ul class="tk-tags"><li>Claude</li><li>ChatGPT</li><li>GitHub Copilot</li><li>LLM APIs</li><li>Prompt engineering</li></ul>
+</article>
 </div>
 </div>
 </section>
