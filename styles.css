@@ -814,3 +814,11 @@ dialog ul { padding-left: 20px; }
 .tk-art .sketch-heading { font-size: clamp(1.9rem, 2.6vw, 2.35rem); }
 .tk-art .tk-desc { margin: 4px 0 0; max-width: 240px; font-size: .84rem; line-height: 1.55; color: var(--muted); }
 [data-theme="dark"] .tk-art .tk-desc { color: #b9c0c7; }
+
+/* Phone: avoid two illustrations back to back (About + Toolkit). Keep the title and line, left-aligned like the other sections. */
+@media (max-width: 630px) {
+  .tk-art picture { display: none; }
+  .tk-art { align-items: flex-start; text-align: left; gap: 6px; padding: 0 0 4px; }
+  .tk-art .tk-head { align-items: flex-start; }
+  .tk-art .tk-desc { max-width: none; margin: 0; font-size: .84rem; }
+}
