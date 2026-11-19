@@ -739,41 +739,33 @@ dialog ul { padding-left: 20px; }
 }
 
 /* ============================================================
-   Toolkit v4 — same tile language as the rest of the page:
-   blue glyph on top, bold label, quiet line of tools underneath.
+   Toolkit v5 — nine equal tiles in a 3 x 3 grid.
+   Same language as the rest of the page: blue glyph, bold label,
+   quiet line of tools. SQL gets a soft blue tint, same size.
    ============================================================ */
-.tk-grid { margin-top: 24px; display: grid; gap: 11px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tk-grid { margin-top: 24px; display: grid; gap: 11px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; }
 .tk-tile {
   display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0;
   padding: 16px 18px 17px; border: 1px solid var(--line); border-radius: 11px; background: var(--paper);
 }
-.tk-wide { grid-column: span 2; }
-.tk-full { grid-column: 1 / -1; }
 .tk-icon { display: inline-flex; align-items: center; height: 26px; font-family: var(--hand-font); font-size: 1.5rem; line-height: 1; color: var(--blue-dark); }
 .tk-icon.code-icon { font-family: ui-monospace, monospace; font-size: .94rem; font-weight: 700; }
 .tk-name { font-size: .86rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
 .tk-tools { font-size: .76rem; line-height: 1.6; color: var(--muted); }
+.tk-t { white-space: nowrap; }
+.tk-t:not(:last-child)::after { content: " ·"; margin-right: .1em; }
 
-/* SQL: a quiet blue tint, no badge */
+/* SQL: the one I lean on most — same box, quiet blue tint */
 .tk-sql { background: rgba(36,123,200,.045); border-color: rgba(36,123,200,.4); }
-.tk-sql .tk-name { font-size: 1rem; }
-.tk-sql .tk-tools { font-size: .84rem; color: var(--blue-dark); }
-
+.tk-sql .tk-tools { color: var(--blue-dark); }
 
 [data-theme="dark"] .tk-tile { background: #1b1d20; border-color: #36393d; }
 [data-theme="dark"] .tk-sql { background: rgba(77,160,235,.07); border-color: rgba(77,160,235,.5); }
 [data-theme="dark"] .tk-icon, [data-theme="dark"] .tk-sql .tk-tools { color: var(--blue); }
 [data-theme="dark"] .tk-tools { color: #b9c0c7; }
 
-@media (max-width: 900px) {
-  .tk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .tk-wide, .tk-solo { grid-column: 1 / -1; }
-}
-@media (max-width: 560px) {
-  .tk-grid { grid-template-columns: 1fr; gap: 9px; margin-top: 17px; }
+/* narrow screens: one column, every tile still the same size */
+@media (max-width: 700px) {
+  .tk-grid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 9px; margin-top: 17px; }
   .tk-tile { padding: 14px 16px 15px; }
 }
-
-/* keep the separator dot attached to the previous tool, never at the start of a line */
-.tk-t { white-space: nowrap; }
-.tk-t:not(:last-child)::after { content: " ·"; margin-right: .1em; }
