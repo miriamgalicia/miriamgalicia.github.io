@@ -19,7 +19,7 @@
     // Preserve light mode by default; restore the visitor's own choice.
     try { if (localStorage.getItem('mg-portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
   </script>
-<link href="./styles.css?v=20261119-toolkit-v3" rel="stylesheet"/>
+<link href="./styles.css?v=20261119-toolkit-v4" rel="stylesheet"/>
 <script defer="" src="./script.js?v=20261109-dark-v1"></script>
 </head>
 <body>
@@ -79,46 +79,20 @@
 </div>
 </div>
 <div aria-label="Skills and tools" class="tk-grid">
-<article class="tk-card tk-wide tk-featured"><span class="tk-badge">Most used</span>
-<div class="tk-head"><span aria-hidden="true" class="tk-icon code-icon">&lt;/&gt;</span><h3 class="tk-title">SQL</h3></div>
-<ul class="tk-tags"><li>DDL</li><li>DML</li><li>DQL</li><li>CTEs</li><li>Window functions</li><li>PK / FK</li></ul>
-</article>
-<article class="tk-card tk-solo">
-<div class="tk-head"><span aria-hidden="true" class="tk-icon">λ</span><h3 class="tk-title">Python</h3></div>
-<ul class="tk-tags"><li>pandas</li><li>NumPy</li><li>seaborn</li><li>Plotly</li><li>Streamlit</li></ul>
-</article>
-<article class="tk-card tk-full">
-<div class="tk-head"><span aria-hidden="true" class="tk-icon">◷</span><h3 class="tk-title">Analytics</h3></div>
+<div class="tk-tile tk-wide tk-sql"><span aria-hidden="true" class="tk-icon code-icon">&lt;/&gt;</span><span class="tk-name">SQL</span><span class="tk-tools"><span class="tk-t">DDL</span> <span class="tk-t">DML</span> <span class="tk-t">DQL</span> <span class="tk-t">CTEs</span> <span class="tk-t">Window functions</span> <span class="tk-t">PK / FK</span></span></div>
+<div class="tk-tile tk-solo"><span aria-hidden="true" class="tk-icon">λ</span><span class="tk-name">Python</span><span class="tk-tools"><span class="tk-t">pandas</span> <span class="tk-t">NumPy</span> <span class="tk-t">seaborn</span> <span class="tk-t">Plotly</span> <span class="tk-t">Streamlit</span></span></div>
+<div class="tk-tile tk-full"><span aria-hidden="true" class="tk-icon">◷</span><span class="tk-name">Analytics</span>
 <div class="tk-groups">
-<div class="tk-group"><h4>Consumer</h4><ul><li>Retention &amp; cohorts</li><li>Share of wallet</li><li>Customer overlap</li><li>Shopper behavior</li></ul></div>
-<div class="tk-group"><h4>Market</h4><ul><li>Market share</li><li>Competitive benchmarking</li><li>Sales trends</li><li>Opportunity sizing</li></ul></div>
-<div class="tk-group"><h4>Panel</h4><ul><li>Consumer panels</li><li>Card-transaction data</li><li>E-receipts</li><li>First-party data (online &amp; offline)</li></ul></div>
-</div>
-</article>
-<article class="tk-card ">
-<div class="tk-head"><span aria-hidden="true" class="tk-icon">◆</span><h3 class="tk-title">Data quality</h3></div>
-<ul class="tk-tags"><li>Profiling</li><li>Cleaning</li><li>Standardization</li><li>Validation</li><li>Deduplication</li><li>Outlier detection</li><li>Monitoring</li><li>Governance</li><li>Anomaly detection</li></ul>
-</article>
-<article class="tk-card ">
-<div class="tk-head"><span aria-hidden="true" class="tk-icon">☰</span><h3 class="tk-title">Analytics engineering</h3></div>
-<ul class="tk-tags"><li>PySpark</li><li>Databricks</li><li>Snowflake</li><li>Azure</li><li>ETL pipelines</li><li>APIs</li><li>Automation</li></ul>
-</article>
-<article class="tk-card ">
-<div class="tk-head"><span aria-hidden="true" class="tk-icon">▦</span><h3 class="tk-title">Visualization</h3></div>
-<ul class="tk-tags"><li>Power BI</li><li>Tableau</li><li>Advanced Excel</li><li>Altair</li><li>Data storytelling</li></ul>
-</article>
-<article class="tk-card ">
-<div class="tk-head"><span aria-hidden="true" class="tk-icon">∿</span><h3 class="tk-title">Statistical modeling</h3></div>
-<ul class="tk-tags"><li>Inference</li><li>A/B testing</li><li>Hypothesis testing</li><li>Regression</li><li>Panel data</li><li>ARIMA / SARIMA forecasting</li></ul>
-</article>
-<article class="tk-card ">
-<div class="tk-head"><span aria-hidden="true" class="tk-icon">⌓</span><h3 class="tk-title">Predictive analytics</h3></div>
-<ul class="tk-tags"><li>Linear regression</li><li>scikit-learn</li></ul>
-</article>
-<article class="tk-card ">
-<div class="tk-head"><span aria-hidden="true" class="tk-icon">✧</span><h3 class="tk-title">Generative AI</h3></div>
-<ul class="tk-tags"><li>Claude</li><li>ChatGPT</li><li>GitHub Copilot</li><li>LLM APIs</li><li>Prompt engineering</li></ul>
-</article>
+<div class="tk-group"><span class="tk-label">Consumer</span><span class="tk-list">Retention &amp; cohorts<br/>Share of wallet<br/>Customer overlap<br/>Shopper behavior</span></div>
+<div class="tk-group"><span class="tk-label">Market</span><span class="tk-list">Market share<br/>Competitive benchmarking<br/>Sales trends<br/>Opportunity sizing</span></div>
+<div class="tk-group"><span class="tk-label">Panel</span><span class="tk-list">Consumer panels<br/>Card-transaction data<br/>E-receipts<br/>First-party data (online &amp; offline)</span></div>
+</div></div>
+<div class="tk-tile "><span aria-hidden="true" class="tk-icon">◆</span><span class="tk-name">Data quality</span><span class="tk-tools"><span class="tk-t">Profiling</span> <span class="tk-t">Cleaning</span> <span class="tk-t">Standardization</span> <span class="tk-t">Validation</span> <span class="tk-t">Deduplication</span> <span class="tk-t">Outlier detection</span> <span class="tk-t">Monitoring</span> <span class="tk-t">Governance</span> <span class="tk-t">Anomaly detection</span></span></div>
+<div class="tk-tile "><span aria-hidden="true" class="tk-icon">☰</span><span class="tk-name">Analytics engineering</span><span class="tk-tools"><span class="tk-t">PySpark</span> <span class="tk-t">Databricks</span> <span class="tk-t">Snowflake</span> <span class="tk-t">Azure</span> <span class="tk-t">ETL pipelines</span> <span class="tk-t">APIs</span> <span class="tk-t">Automation</span></span></div>
+<div class="tk-tile "><span aria-hidden="true" class="tk-icon">▦</span><span class="tk-name">Visualization</span><span class="tk-tools"><span class="tk-t">Power BI</span> <span class="tk-t">Tableau</span> <span class="tk-t">Advanced Excel</span> <span class="tk-t">Altair</span> <span class="tk-t">Data storytelling</span></span></div>
+<div class="tk-tile "><span aria-hidden="true" class="tk-icon">∿</span><span class="tk-name">Statistical modeling</span><span class="tk-tools"><span class="tk-t">Inference</span> <span class="tk-t">A/B testing</span> <span class="tk-t">Hypothesis testing</span> <span class="tk-t">Regression</span> <span class="tk-t">Panel data</span> <span class="tk-t">ARIMA / SARIMA forecasting</span></span></div>
+<div class="tk-tile "><span aria-hidden="true" class="tk-icon">⌓</span><span class="tk-name">Predictive analytics</span><span class="tk-tools"><span class="tk-t">Linear regression</span> <span class="tk-t">scikit-learn</span></span></div>
+<div class="tk-tile "><span aria-hidden="true" class="tk-icon">✧</span><span class="tk-name">Generative AI</span><span class="tk-tools"><span class="tk-t">Claude</span> <span class="tk-t">ChatGPT</span> <span class="tk-t">GitHub Copilot</span> <span class="tk-t">LLM APIs</span> <span class="tk-t">Prompt engineering</span></span></div>
 </div>
 </div>
 </section>
