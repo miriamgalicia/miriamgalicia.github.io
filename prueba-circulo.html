@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="Miriam Galicia - Data Analyst and Analytics Engineering. Selected work in consumer analytics, data engineering, and data storytelling." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Miriam Galicia | Data Analyst" property="og:title"/>
+<meta content="Finding stories hidden in data. Analytics, engineering and thoughtful storytelling." property="og:description"/>
+<title>Miriam Galicia | Data Analyst</title>
+<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    // Preserve light mode by default; restore the visitor's own choice.
+    try { if (localStorage.getItem('mg-portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+  </script>
+<link href="./styles.css?v=20261119-toolkit-v7" rel="stylesheet"/>
+<script defer="" src="./script.js?v=20261109-dark-v1"></script>
+<style>
+/* ---- TEST: skills arranged in a circle around the illustration ---- */
+.tk-desc { margin: 10px 0 0; font-size: .9rem; line-height: 1.6; color: var(--muted); max-width: 520px; }
+.tk-tile { display: grid; grid-template-columns: 26px minmax(0,1fr); column-gap: 12px; align-items: center; min-width: 0; padding: 11px 15px; border: 1px solid var(--line); border-radius: 11px; background: var(--paper); }
+.tk-svg { width: 24px; height: 24px; color: var(--blue-dark); }
+.tk-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.tk-name { font-size: .82rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.tk-tools { font-size: .72rem; line-height: 1.55; color: var(--muted); }
+.tk-t { white-space: nowrap; }
+.tk-t:not(:last-child)::after { content: " ·"; margin-right: .1em; }
+.tk-sql { background: rgba(36,123,200,.045); border-color: rgba(36,123,200,.4); }
+.tk-sql .tk-tools { color: var(--blue-dark); }
+.orbit-ring { display: none; }
+.orbit { margin-top: 26px; display: grid; gap: 9px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+.orbit-art { grid-column: 1 / -1; order: -1; display: grid; place-items: center; padding-bottom: 8px; }
+.orbit-art picture, .orbit-art img { display: block; width: 100%; height: auto; }
+.orbit-art picture { width: min(100%, 200px); }
+.tk-short { display: none; }
+.orbit .tk-tile { order: 3; } .orbit .o-sql { order: 1; } .orbit .o-python { order: 2; }
+@media (max-width: 600px) { .orbit { grid-template-columns: 1fr; } .orbit-art picture { width: min(100%, 170px); } }
+
+@media (min-width: 1100px) {
+  .orbit { display: block; position: relative; width: 100%; max-width: 1060px; margin: 22px auto 0; aspect-ratio: 1060 / 620; }
+  .orbit-ring { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+  .orbit-ring ellipse { fill: none; stroke: rgba(36,123,200,.38); stroke-width: 1.4; stroke-dasharray: 5 7; vector-effect: non-scaling-stroke; }
+  .orbit-art { position: absolute; left: 50%; top: 50%; width: 20%; transform: translate(-50%,-50%); padding: 0; }
+  .orbit-art picture { width: 100%; }
+  .orbit .tk-tile { position: absolute; width: 22.6%; height: 82px; transform: translate(-50%,-50%); }
+  .tk-short { display: block; } .tk-long { display: none; }
+  .o-python { left: 50%;   top: 9.7%; }
+  .o-analytics { left: 76.7%; top: 21.5%; }
+  .o-aeng { left: 87.7%; top: 50%; }
+  .o-viz { left: 76.7%; top: 78.5%; }
+  .o-genai { left: 50%;   top: 90.3%; }
+  .o-stat { left: 23.3%; top: 78.5%; }
+  .o-dq { left: 12.3%; top: 50%; }
+  .o-sql { left: 23.3%; top: 21.5%; }
+}
+[data-theme="dark"] .tk-desc { color: #b9c0c7; }
+[data-theme="dark"] .tk-tile { background: #1b1d20; border-color: #36393d; }
+[data-theme="dark"] .tk-sql { background: rgba(77,160,235,.07); border-color: rgba(77,160,235,.5); }
+[data-theme="dark"] .tk-svg, [data-theme="dark"] .tk-sql .tk-tools { color: var(--blue); }
+[data-theme="dark"] .tk-tools { color: #b9c0c7; }
+[data-theme="dark"] .orbit-art picture { filter: invert(1) hue-rotate(180deg) brightness(1.85); }
+[data-theme="dark"] .orbit-ring ellipse { stroke: rgba(77,160,235,.45); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Miriam Galicia, home" class="brand" href="#about">MIRIAM GALICIA<span class="brand-period">.</span></a>
+<nav aria-label="Main navigation" class="primary-nav" id="primary-nav">
+<a class="nav-link active" href="#about">About</a>
+<a class="nav-link" href="#toolkit">Toolkit</a>
+<a class="nav-link" href="#work">Work</a>
+<a class="nav-link" href="#experience">Experience</a>
+<a class="nav-link" href="#contact">Contact</a>
+</nav>
+<div class="header-actions">
+<a class="cv-link" href="./assets/Miriam_Galicia_CV_public.pdf?v=20261106-2" rel="noopener" target="_blank">CV <span aria-hidden="true">↗</span></a>
+<button aria-label="Switch to dark mode" aria-pressed="false" class="theme-toggle" title="Switch theme" type="button">
+<svg aria-hidden="true" class="theme-icon theme-icon-moon" fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"></path></svg>
+<svg aria-hidden="true" class="theme-icon theme-icon-sun" fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+</button>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" class="menu-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="about-title" class="introduction section-cream" id="about">
+<div class="container introduction-grid">
+<div class="intro-copy">
+<p class="section-kicker">ABOUT ME <span class="intro-kicker-sep">·</span> DATA ANALYST / ANALYTICS ENGINEERING</p>
+<h1 id="about-title">Miriam Galicia<span class="brand-period">.</span></h1>
+<p class="intro-lead" style="text-wrap:pretty">Hii! I’m a Custom Data Analyst with 3+ years in consulting and consumer research, turning messy data into answers about how consumers behave and how markets move.</p>
+<p class="intro-body">…and I’m so happy you’re here! This is my portfolio, all in one place: my experience, what I studied, a few things I enjoy outside of work, and how to reach me. You’ll find my CV at the top, and there’s a night mode if you prefer. Welcome :)</p>
+<div class="about-facts intro-facts">
+<div><span aria-hidden="true" class="fact-mark">◎</span><span>Mexico City · Projects across North America, LATAM, Europe and APAC</span></div>
+<div><span aria-hidden="true" class="fact-mark">✦</span><span>MSc in Economics</span></div>
+<div><span aria-hidden="true" class="fact-mark">☶</span><span>Spanish (native) · English (C1) · French (A1) · German (A1)</span></div>
+</div>
+
+</div>
+<div class="intro-art intro-art-main">
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/data-sketch-original-clean-still.png"/>
+<source srcset="./assets/data-sketch-original-clean.webp" type="image/webp"/>
+<img alt="Original minimal hand-drawn portrait of a woman with glasses and subtle blue data bars" fetchpriority="high" height="512" src="./assets/data-sketch-original.gif" width="513"/>
+</picture>
+</div>
+</div>
+</section>
+<section aria-labelledby="toolkit-title" class="toolkit-section" id="toolkit">
+<div class="container section-content toolkit-inner">
+<div class="toolkit-header">
+<div>
+<p class="section-kicker">TOOLKIT</p>
+<h2 class="section-title" id="toolkit-title">Tools I use<span class="brand-period">.</span></h2>
+<p class="tk-desc">A mix of tools for data analysis, engineering, visualization and modeling.</p>
+</div>
+</div>
+<div aria-label="Skills and tools" class="orbit">
+<svg aria-hidden="true" class="orbit-ring" preserveAspectRatio="none" viewBox="0 0 1060 620"><ellipse cx="530" cy="310" rx="400" ry="250"/></svg>
+<div class="orbit-art">
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/tools-woman-drilling-clean-still.png"/>
+<source srcset="./assets/tools-woman-drilling-clean.webp" type="image/webp"/>
+<img alt="Hand-drawn woman with glasses drilling into a blue pie chart" height="508" loading="lazy" src="./assets/tools-woman-drilling.gif" width="506"/>
+</picture>
+</div>
+<div class="tk-tile o-python"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 3C8.6 3 8.8 4.5 8.8 4.5V7H12v1H6.6S4 7.7 4 11.4 6.2 15 6.2 15H8v-2.6S7.9 10 10.3 10H14s2.2.1 2.2-2.1V5S16.6 3 12 3z"/><path d="M12 21c3.4 0 3.2-1.5 3.2-1.5V17H12v-1h5.4s2.6.3 2.6-3.4-2.2-3.6-2.2-3.6H16v2.6s.1 2.4-2.3 2.4H10s-2.2-.1-2.2 2.1v2.9S7.4 21 12 21z"/><circle cx="9.9" cy="5.2" fill="currentColor" r=".6" stroke="none"/><circle cx="14.1" cy="18.8" fill="currentColor" r=".6" stroke="none"/></svg><div class="tk-txt"><span class="tk-name">Python</span><span class="tk-tools tk-short"><span class="tk-t">pandas</span> <span class="tk-t">NumPy</span> <span class="tk-t">Plotly</span> <span class="tk-t">Streamlit</span></span><span class="tk-tools tk-long"><span class="tk-t">pandas</span> <span class="tk-t">NumPy</span> <span class="tk-t">seaborn</span> <span class="tk-t">Plotly</span> <span class="tk-t">Streamlit</span></span></div></div>
+<div class="tk-tile o-analytics"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15.5 3.4A9 9 0 0 1 20.6 8.5H15.5z"/></svg><div class="tk-txt"><span class="tk-name">Analytics</span><span class="tk-tools tk-short"><span class="tk-t">Market share</span> <span class="tk-t">Retention</span> <span class="tk-t">Share of wallet</span></span><span class="tk-tools tk-long"><span class="tk-t">Market share</span> <span class="tk-t">Share of wallet</span> <span class="tk-t">Retention &amp; cohorts</span> <span class="tk-t">Customer overlap</span> <span class="tk-t">Sales trends</span> <span class="tk-t">Consumer panels</span> <span class="tk-t">Card &amp; e-receipt data</span> <span class="tk-t">First-party data</span></span></div></div>
+<div class="tk-tile o-aeng"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2"/><path d="M12 7.2V12M5 15.6V12h14v3.6M12 12v3.6"/><circle cx="5" cy="17.8" r="2.2"/><circle cx="12" cy="17.8" r="2.2"/><circle cx="19" cy="17.8" r="2.2"/></svg><div class="tk-txt"><span class="tk-name">Analytics engineering</span><span class="tk-tools tk-short"><span class="tk-t">PySpark</span> <span class="tk-t">Databricks</span> <span class="tk-t">Snowflake</span> <span class="tk-t">ETL</span></span><span class="tk-tools tk-long"><span class="tk-t">PySpark</span> <span class="tk-t">Databricks</span> <span class="tk-t">Snowflake</span> <span class="tk-t">Azure</span> <span class="tk-t">ETL pipelines</span> <span class="tk-t">APIs</span> <span class="tk-t">Automation</span></span></div></div>
+<div class="tk-tile o-viz"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><rect height="12" rx="1.6" width="18" x="3" y="4"/><path d="M8 20h8M12 16v4"/><path d="M8 13v-2M12 13V8M16 13v-3"/></svg><div class="tk-txt"><span class="tk-name">Visualization</span><span class="tk-tools tk-short"><span class="tk-t">Power BI</span> <span class="tk-t">Tableau</span> <span class="tk-t">Excel</span></span><span class="tk-tools tk-long"><span class="tk-t">Power BI</span> <span class="tk-t">Tableau</span> <span class="tk-t">Advanced Excel</span> <span class="tk-t">Altair</span> <span class="tk-t">Data storytelling</span></span></div></div>
+<div class="tk-tile o-genai"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 3c.6 4.6 3.4 7.4 9 9-5.6 1.6-8.4 4.4-9 9-.6-4.6-3.4-7.4-9-9 5.6-1.6 8.4-4.4 9-9z"/></svg><div class="tk-txt"><span class="tk-name">Generative AI</span><span class="tk-tools tk-short"><span class="tk-t">Claude</span> <span class="tk-t">ChatGPT</span> <span class="tk-t">LLM APIs</span></span><span class="tk-tools tk-long"><span class="tk-t">Claude</span> <span class="tk-t">ChatGPT</span> <span class="tk-t">GitHub Copilot</span> <span class="tk-t">LLM APIs</span> <span class="tk-t">Prompt engineering</span></span></div></div>
+<div class="tk-tile o-stat"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6.5 20v-5M11 20V9M15.5 20v-7M20 20V5"/></svg><div class="tk-txt"><span class="tk-name">Statistical modeling</span><span class="tk-tools tk-short"><span class="tk-t">A/B testing</span> <span class="tk-t">Regression</span> <span class="tk-t">ARIMA</span> <span class="tk-t">scikit-learn</span></span><span class="tk-tools tk-long"><span class="tk-t">Inference</span> <span class="tk-t">A/B testing</span> <span class="tk-t">Hypothesis testing</span> <span class="tk-t">Linear regression</span> <span class="tk-t">Panel data</span> <span class="tk-t">ARIMA / SARIMA</span> <span class="tk-t">scikit-learn</span></span></div></div>
+<div class="tk-tile o-dq"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="m3 12.2 9 5 9-5"/><path d="m3 16.2 9 5 9-5"/></svg><div class="tk-txt"><span class="tk-name">Data quality</span><span class="tk-tools tk-short"><span class="tk-t">Profiling</span> <span class="tk-t">Cleaning</span> <span class="tk-t">Validation</span></span><span class="tk-tools tk-long"><span class="tk-t">Profiling</span> <span class="tk-t">Cleaning</span> <span class="tk-t">Standardization</span> <span class="tk-t">Validation</span> <span class="tk-t">Deduplication</span> <span class="tk-t">Outlier detection</span> <span class="tk-t">Monitoring</span> <span class="tk-t">Governance</span> <span class="tk-t">Anomaly detection</span></span></div></div>
+<div class="tk-tile o-sql tk-sql"><svg aria-hidden="true" class="tk-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14" x2="10" y1="5" y2="19"/></svg><div class="tk-txt"><span class="tk-name">SQL</span><span class="tk-tools tk-short"><span class="tk-t">DDL</span> <span class="tk-t">DML</span> <span class="tk-t">CTEs</span> <span class="tk-t">Window functions</span></span><span class="tk-tools tk-long"><span class="tk-t">DDL</span> <span class="tk-t">DML</span> <span class="tk-t">DQL</span> <span class="tk-t">CTEs</span> <span class="tk-t">Window functions</span> <span class="tk-t">PK / FK</span></span></div></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="work-title" class="work-section section-cream" id="work">
+<div class="container section-content">
+<div class="section-heading">
+<div>
+<p class="section-kicker">WHAT I WORK ON</p>
+<h2 class="section-title sketch-heading" id="work-title">Selected work <span aria-hidden="true" class="sketch-underline"></span></h2>
+<p class="work-tagline">Finding stories hidden in <span class="work-tagline-blue">data.</span></p></div>
+<a class="section-more" href="#experience">Explore my experience <span aria-hidden="true">→</span></a>
+</div>
+<div class="project-grid">
+<article class="project-card">
+<div aria-label="Sketch of a woman watching different-sized buildings as market growth charts" class="project-art">
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/market-share-city-card-clean-still.png"/>
+<source srcset="./assets/market-share-city-card-clean.webp" type="image/webp"/>
+<img alt="Hand-sketched woman looking at a growing market skyline" height="340" loading="lazy" src="./assets/market-share-city-card.gif" width="560"/>
+</picture>
+</div>
+<div class="project-copy">
+<p class="project-number">FOCUS AREA 01</p>
+<h3>Market &amp; Consumer Insights</h3>
+<p class="project-tags">SQL  ·  Python  ·  Consumer data</p>
+<p>Turning transactional and panel data into market share, retention and competitive insights.</p>
+<button class="project-open" data-project="consumer" type="button">Explore focus area <span aria-hidden="true">→</span></button>
+</div>
+</article>
+<article class="project-card">
+<div aria-label="Sketch of a woman carrying data up stairs and loading it into a database" class="project-art">
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/data-ingestion-stairs-card-clean-still.png"/>
+<source srcset="./assets/data-ingestion-stairs-card-clean.webp" type="image/webp"/>
+<img alt="Data ingestion: a person climbs stairs to load data into a database" height="340" loading="lazy" src="./assets/data-ingestion-stairs-card.gif" width="560"/>
+</picture>
+</div>
+<div class="project-copy">
+<p class="project-number">FOCUS AREA 02</p>
+<h3>Data Ingestion &amp; Automation</h3>
+<p class="project-tags">Snowflake  ·  Databricks  ·  PySpark</p>
+<p>Building pipelines and self-service workflows that make complex datasets easier to use.</p>
+<button class="project-open" data-project="engineering" type="button">Explore focus area <span aria-hidden="true">→</span></button>
+</div>
+</article>
+<article class="project-card">
+<div aria-label="Hand-drawn shopper adding a blue product to a shopping cart" class="project-art">
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/consumer-shopping-cart-card-clean-still.png"/>
+<source srcset="./assets/consumer-shopping-cart-card-clean.webp" type="image/webp"/>
+<img alt="A shopper places a product in a cart, representing consumer behavior analysis" height="340" loading="lazy" src="./assets/consumer-shopping-cart-card.gif" width="560"/>
+</picture>
+</div>
+<div class="project-copy">
+<p class="project-number">FOCUS AREA 03</p>
+<h3>Shopper &amp; Retail Analytics</h3>
+<p class="project-tags">Consumer panels  ·  E-receipts  ·  BI</p>
+<p>Understanding shopper behavior and communicating the patterns behind commercial decisions.</p>
+<button class="project-open" data-project="shopper" type="button">Explore focus area <span aria-hidden="true">→</span></button>
+</div>
+</article>
+</div>
+<p class="disclosure">The animations are conceptual illustrations. These sections summarize professional focus areas, not public client case studies or proprietary datasets.</p>
+</div>
+</section>
+<section aria-labelledby="experience-title" class="experience-section" id="experience">
+<div class="container section-content">
+<div class="section-heading">
+<div>
+<p class="section-kicker">THE JOURNEY</p>
+<h2 class="section-title sketch-heading" id="experience-title">Experience <span aria-hidden="true" class="sketch-underline"></span></h2>
+</div>
+<span class="section-caption">From research to decision-making</span>
+</div>
+<div class="timeline-grid">
+<article class="timeline-item">
+<span class="timeline-dot"></span>
+<p class="time-range">AUG 2025 — PRESENT</p>
+<h3>Bain &amp; Company</h3>
+<p class="role">Custom Data Analyst</p>
+<p>Custom consumer and market analyses, self-service tools and scalable data pipelines.</p>
+<span class="inline-stat">50+ consulting cases supported</span>
+</article>
+<article class="timeline-item">
+<span class="timeline-dot"></span>
+<p class="time-range">AUG 2024 — AUG 2025</p>
+<h3>NielsenIQ</h3>
+<p class="role">Junior Data Analyst</p>
+<p>KPI anomaly detection, data quality monitoring and root-cause analysis on consumer-panel data.</p>
+<span class="inline-stat">Anomaly resolution: 3 days to 1</span>
+</article>
+<article class="timeline-item">
+<span class="timeline-dot"></span>
+<p class="time-range">JAN 2021 — JAN 2022</p>
+<h3>Consejo de la Comunicación</h3>
+<p class="role">Market Researcher</p>
+<p>ESG benchmarking with Power BI and API data, plus research-backed business cases.</p>
+<span class="inline-stat">20+ companies in ESG dashboard</span>
+</article>
+</div>
+</div>
+</section><section aria-labelledby="beyond-title" class="beyond-section section-cream" id="beyond">
+<div class="container beyond-layout">
+<div class="beyond-copy">
+<p class="section-kicker">BEYOND THE DATA</p>
+<h2 class="beyond-title" id="beyond-title">Beyond the data<span class="brand-period">.</span></h2>
+<p>Painting, live music, nature, reading, films and staying active — the little things that keep me curious and creative outside of work.</p>
+</div>
+<div aria-hidden="true" class="beyond-art">
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/about-me-seis-facetas-clean-still.png"/>
+<source srcset="./assets/about-me-seis-facetas-clean.webp" type="image/webp"/>
+<img alt="" height="251" loading="lazy" src="./assets/about-me-seis-facetas.gif" width="252"/>
+</picture>
+</div>
+</div>
+</section>
+<section aria-labelledby="contact-title" class="contact-section" id="contact">
+<div class="container contact-layout">
+<div>
+<p class="section-kicker">SAY HELLO</p>
+<h2 id="contact-title">Let's make sense<br/>of something <span class="contact-highlight">complex.</span></h2>
+<p>Open to conversations about thoughtful analytics, better data products and meaningful insights.</p>
+<div aria-label="Ways to contact Miriam" class="contact-actions" role="group">
+<a aria-label="Send Miriam an email" class="contact-option contact-option-primary" href="mailto:migaliciama@gmail.com?subject=Hello%20Miriam%20-%20Portfolio">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="m3 7 9 6 9-6"></path></svg>
+<span>Email</span><span aria-hidden="true" class="contact-arrow">↗</span>
+</a>
+<a aria-label="View Miriam's LinkedIn profile" class="contact-option" href="https://www.linkedin.com/in/migaliciama/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M8 10v7M8 7.2v.1M12 17v-7M12 13.2a3.2 3.2 0 0 1 6.4 0V17"></path></svg>
+<span>LinkedIn</span><span aria-hidden="true" class="contact-arrow">↗</span>
+</a>
+<a aria-label="Start a WhatsApp chat with Miriam" class="contact-option" href="https://wa.me/525548518953?text=Hi%20Miriam%21%20I%20found%20your%20portfolio%20and%20would%20love%20to%20connect." rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20 11.4a8.2 8.2 0 0 1-11.8 7.4L4 20l1.3-4.2A8.2 8.2 0 1 1 20 11.4Z"></path><path d="M9 9.3c.2 2.5 2.2 4.5 4.7 4.8l1.3-1.1 2.1 1.2c-.5 1.4-1.7 2-3 1.6-3.3-.9-5.9-3.5-6.7-6.7-.3-1.3.2-2.5 1.6-3l1 2.1-1.2 1.2Z"></path></svg>
+<span>WhatsApp</span><span aria-hidden="true" class="contact-arrow">↗</span>
+</a>
+</div>
+</div>
+<div aria-hidden="true" class="contact-decoration">
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/contact-chica-marcando-clean-still.png"/>
+<source srcset="./assets/contact-chica-marcando-clean.webp" type="image/webp"/>
+<img alt="" class="contact-art" height="438" loading="lazy" src="./assets/contact-chica-marcando.gif" width="437"/>
+</picture>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<a class="brand brand-footer" href="#about">MIRIAM GALICIA<span class="brand-period">.</span></a>
+<span aria-hidden="true" class="footer-line"></span>
+<p>© <span id="current-year">2026</span>   Built with curiosity and data.</p>
+<div class="footer-links"><a href="https://www.linkedin.com/in/migaliciama/" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="mailto:migaliciama@gmail.com">Email</a><a href="#about">Back to top ↑</a></div>
+</div>
+</footer>
+<dialog aria-labelledby="dialog-title" id="project-dialog">
+<div class="dialog-inner">
+<button aria-label="Close project details" class="dialog-close" type="button">×</button>
+<p class="section-kicker" id="dialog-kicker"></p>
+<h2 id="dialog-title"></h2>
+<p id="dialog-description"></p>
+<h3>What this work involves</h3>
+<ul id="dialog-list"></ul>
+<p class="dialog-note">Overview only. No client or proprietary datasets are published here.</p>
+</div>
+</dialog>
+</body>
+</html>
