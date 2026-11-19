@@ -739,33 +739,60 @@ dialog ul { padding-left: 20px; }
 }
 
 /* ============================================================
-   Toolkit v5 — nine equal tiles in a 3 x 3 grid.
-   Same language as the rest of the page: blue glyph, bold label,
-   quiet line of tools. SQL gets a soft blue tint, same size.
+   Toolkit v6 — tools arranged around the illustration.
+   Same tile language as the page: blue line icon, bold label,
+   quiet line of tools. All tiles share one size.
    ============================================================ */
-.tk-grid { margin-top: 24px; display: grid; gap: 11px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; }
-.tk-tile {
-  display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0;
-  padding: 16px 18px 17px; border: 1px solid var(--line); border-radius: 11px; background: var(--paper);
+.tk-ring {
+  margin-top: 28px; display: grid; gap: 11px; align-items: stretch;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 330px) minmax(0, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    ".    python    ."
+    "sql  art       analytics"
+    "dq   art       aeng"
+    "stat art       viz"
+    ".    genai     .";
 }
-.tk-icon { display: inline-flex; align-items: center; height: 26px; font-family: var(--hand-font); font-size: 1.5rem; line-height: 1; color: var(--blue-dark); }
-.tk-icon.code-icon { font-family: ui-monospace, monospace; font-size: .94rem; font-weight: 700; }
+.a-python { grid-area: python; } .a-sql { grid-area: sql; } .a-analytics { grid-area: analytics; }
+.a-dq { grid-area: dq; } .a-aeng { grid-area: aeng; } .a-stat { grid-area: stat; }
+.a-viz { grid-area: viz; } .a-genai { grid-area: genai; } .a-art { grid-area: art; }
+
+.tk-tile {
+  display: grid; grid-template-columns: 30px minmax(0, 1fr); column-gap: 14px; align-items: center;
+  min-width: 0; padding: 14px 18px; border: 1px solid var(--line); border-radius: 11px; background: var(--paper);
+}
+.tk-svg { width: 28px; height: 28px; color: var(--blue-dark); }
+.tk-txt { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .tk-name { font-size: .86rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
 .tk-tools { font-size: .76rem; line-height: 1.6; color: var(--muted); }
 .tk-t { white-space: nowrap; }
 .tk-t:not(:last-child)::after { content: " ·"; margin-right: .1em; }
 
-/* SQL: the one I lean on most — same box, quiet blue tint */
+/* SQL: the one I lean on most — same size, quiet blue tint */
 .tk-sql { background: rgba(36,123,200,.045); border-color: rgba(36,123,200,.4); }
 .tk-sql .tk-tools { color: var(--blue-dark); }
 
+.tk-art { display: grid; place-items: center; padding: 6px 0; }
+.tk-art picture, .tk-art img { display: block; width: 100%; height: auto; }
+
 [data-theme="dark"] .tk-tile { background: #1b1d20; border-color: #36393d; }
 [data-theme="dark"] .tk-sql { background: rgba(77,160,235,.07); border-color: rgba(77,160,235,.5); }
-[data-theme="dark"] .tk-icon, [data-theme="dark"] .tk-sql .tk-tools { color: var(--blue); }
+[data-theme="dark"] .tk-svg, [data-theme="dark"] .tk-sql .tk-tools { color: var(--blue); }
 [data-theme="dark"] .tk-tools { color: #b9c0c7; }
+[data-theme="dark"] .tk-art picture { filter: invert(1) hue-rotate(180deg) brightness(1.85); }
 
-/* narrow screens: one column, every tile still the same size */
-@media (max-width: 700px) {
-  .tk-grid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 9px; margin-top: 17px; }
-  .tk-tile { padding: 14px 16px 15px; }
+/* tablet: illustration on top, tiles in two columns */
+@media (max-width: 900px) {
+  .tk-ring { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: auto; grid-template-areas: none; }
+  .tk-ring > * { grid-area: auto; }
+  .tk-ring > .tk-art { grid-column: 1 / -1; order: -1; padding: 0 0 8px; }
+  .tk-art picture { width: min(100%, 260px); }
+  .tk-tile { min-height: 104px; }
+}
+/* phone: one column */
+@media (max-width: 600px) {
+  .tk-ring { grid-template-columns: 1fr; gap: 9px; margin-top: 18px; }
+  .tk-tile { padding: 12px 14px; column-gap: 12px; min-height: 0; }
+  .tk-art picture { width: min(100%, 220px); }
 }
