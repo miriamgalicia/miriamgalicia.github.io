@@ -19,7 +19,7 @@
     // Preserve light mode by default; restore the visitor's own choice.
     try { if (localStorage.getItem('mg-portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
   </script>
-<link href="./styles.css?v=20261119-toolkit-v12" rel="stylesheet"/>
+<link href="./styles.css?v=20261119-toolkit-v13" rel="stylesheet"/>
 <script defer="" src="./script.js?v=20261109-dark-v1"></script>
 </head>
 <body>
@@ -272,7 +272,7 @@
 </div>
 </dialog>
 <script>
-/* Reveal each new section as you reach it (skipped for reduced motion; content stays visible without JS) */
+/* Each new section appears as you scroll down to it (skipped for reduced motion; content stays visible without JS) */
 (function () {
   var d = document, root = d.documentElement;
   if (!('IntersectionObserver' in window) || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
