@@ -759,18 +759,11 @@ dialog ul { padding-left: 20px; }
 .tk-sql .tk-name { font-size: 1rem; }
 .tk-sql .tk-tools { font-size: .84rem; color: var(--blue-dark); }
 
-/* Analytics: Consumer | Market | Panel */
-.tk-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; margin-top: 8px; }
-.tk-group { display: flex; flex-direction: column; gap: 7px; padding: 0 22px; border-left: 1px solid var(--line); }
-.tk-group:first-child { padding-left: 0; border-left: 0; }
-.tk-label { font-size: .63rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue-dark); }
-.tk-list { font-size: .8rem; line-height: 1.75; color: var(--muted); }
 
 [data-theme="dark"] .tk-tile { background: #1b1d20; border-color: #36393d; }
 [data-theme="dark"] .tk-sql { background: rgba(77,160,235,.07); border-color: rgba(77,160,235,.5); }
-[data-theme="dark"] .tk-icon, [data-theme="dark"] .tk-label, [data-theme="dark"] .tk-sql .tk-tools { color: var(--blue); }
-[data-theme="dark"] .tk-tools, [data-theme="dark"] .tk-list { color: #b9c0c7; }
-[data-theme="dark"] .tk-group { border-color: #36393d; }
+[data-theme="dark"] .tk-icon, [data-theme="dark"] .tk-sql .tk-tools { color: var(--blue); }
+[data-theme="dark"] .tk-tools { color: #b9c0c7; }
 
 @media (max-width: 900px) {
   .tk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -779,10 +772,6 @@ dialog ul { padding-left: 20px; }
 @media (max-width: 560px) {
   .tk-grid { grid-template-columns: 1fr; gap: 9px; margin-top: 17px; }
   .tk-tile { padding: 14px 16px 15px; }
-  .tk-groups { grid-template-columns: 1fr; }
-  .tk-group, .tk-group:first-child { padding: 12px 0 0; margin-top: 12px; border-left: 0; border-top: 1px solid var(--line); }
-  .tk-group:first-child { padding-top: 0; margin-top: 4px; border-top: 0; }
-  [data-theme="dark"] .tk-group { border-color: #36393d; }
 }
 
 /* keep the separator dot attached to the previous tool, never at the start of a line */
