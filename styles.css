@@ -822,3 +822,31 @@ dialog ul { padding-left: 20px; }
   .tk-art .tk-head { align-items: flex-start; }
   .tk-art .tk-desc { max-width: none; margin: 0; font-size: .84rem; }
 }
+
+/* ============================================================
+   Section dividers: a hand-drawn line with a blue dot (the same dot as the
+   periods in the titles) that draws itself when you reach a new section,
+   plus a gentle fade-up of the section content.
+   ============================================================ */
+main section[id] { position: relative; }
+main section[id] + section[id]::before {
+  content: ""; position: absolute; z-index: 3; top: 0; left: 50%; width: 190px; height: 14px; pointer-events: none;
+  background-color: #17212c;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 14'%3E%3Cpath d='M2 7C18 2 34 12 50 7S72 4 80 7' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M110 7C118 4 132 10 146 7S174 3 188 7' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 14'%3E%3Cpath d='M2 7C18 2 34 12 50 7S72 4 80 7' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M110 7C118 4 132 10 146 7S174 3 188 7' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  transform: translate(-50%, -50%) scaleX(1); transition: transform .9s cubic-bezier(.2,.7,.2,1), opacity .5s ease;
+}
+main section[id] + section[id]::after {
+  content: ""; position: absolute; z-index: 4; top: 0; left: 50%; width: 8px; height: 8px; border-radius: 50%; pointer-events: none;
+  background: var(--blue);
+  transform: translate(-50%, -50%) scale(1); transition: transform .5s cubic-bezier(.3,1.6,.5,1) .45s;
+}
+[data-theme="dark"] main section[id] + section[id]::before { background-color: #e9edef; }
+
+main section[id] + section[id] > div { transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+html.reveal-on main section[id] + section[id]:not(.is-in)::before { transform: translate(-50%, -50%) scaleX(0); opacity: 0; }
+html.reveal-on main section[id] + section[id]:not(.is-in)::after { transform: translate(-50%, -50%) scale(0); }
+html.reveal-on main section[id] + section[id]:not(.is-in) > div { opacity: 0; transform: translateY(18px); }
+
+@media (max-width: 630px) {
+  main section[id] + section[id]::before { width: 150px; height: 12px; }
+}
