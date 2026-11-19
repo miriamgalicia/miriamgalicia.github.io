@@ -827,8 +827,8 @@ dialog ul { padding-left: 20px; }
 main section[id] + section[id] > div { transition: opacity .9s ease, transform .9s cubic-bezier(.2, .7, .2, 1); }
 html.reveal-on main section[id] + section[id]:not(.is-in) > div { opacity: 0; transform: translateY(30px); }
 
-/* Clearer change from one section to the next: alternating soft blue tint */
-.section-cream { background: #f1f6fb; border-top: 1px solid #dce7f1; border-bottom: 1px solid #dce7f1; }
-.beyond-section { border-top: 1px solid #dce7f1; }
+/* Clearer change from one section to the next: alternating soft neutral tone */
+.section-cream { background: #f5f5f3; border-top: 1px solid #e6e6e2; border-bottom: 1px solid #e6e6e2; }
+.beyond-section { border-top: 1px solid #e6e6e2; }
 [data-theme="dark"] .section-cream { background: #181b1f; border-top-color: #2b3138; border-bottom-color: #2b3138; }
 [data-theme="dark"] .beyond-section { border-top-color: #2b3138; }
