@@ -827,14 +827,14 @@ dialog ul { padding-left: 20px; }
 main section[id] + section[id] > div { transition: opacity .9s ease, transform .9s cubic-bezier(.2, .7, .2, 1); }
 html.reveal-on main section[id] + section[id]:not(.is-in) > div { opacity: 0; transform: translateY(30px); }
 
-/* Clearer change from one section to the next: warm linen bands + a fine taupe line that fades at both ends */
-.section-cream { background: #f7f2ea; border-top: 0; border-bottom: 0; }
+/* Clearer change from one section to the next: very light grey-blue bands + a fine grey-blue line that fades at both ends */
+.section-cream { background: #f6f7f9; border-top: 0; border-bottom: 0; }
 .beyond-section { border-top: 0; }
 main section[id] { position: relative; }
 main section[id] + section[id]::before {
   content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 3; pointer-events: none;
   width: min(calc(100% - 48px), 1110px); height: 1px;
-  background: linear-gradient(90deg, rgba(128,104,76,0) 0%, rgba(128,104,76,.34) 14%, rgba(128,104,76,.34) 86%, rgba(128,104,76,0) 100%);
+  background: linear-gradient(90deg, rgba(84,98,114,0) 0%, rgba(84,98,114,.30) 14%, rgba(84,98,114,.30) 86%, rgba(84,98,114,0) 100%);
 }
 [data-theme="dark"] .section-cream { background: #181a1c; }
 [data-theme="dark"] main section[id] + section[id]::before {
